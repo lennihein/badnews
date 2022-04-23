@@ -1,0 +1,9 @@
+
+*.gpr
+
+*.lock
+lifting.rep
+
+*.lock~
+
+*.7z
