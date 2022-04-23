@@ -7,3 +7,7 @@ lifting.rep
 *.lock~
 
 *.7z
+
+tests/__pycache__/
+
+src/__pycache__/
