@@ -31,7 +31,7 @@ if __name__ == "__main__":
         no_label = [i for i in (positives if pos_needed else negatives) if i.label is None]
         import random
         rand = random.choice(no_label)
-        print(file_table([rand]))
+        print(file_table([rand], sha265_len=64))
         print(f"{BOLD}The following URLs are encrypted:{ENDC}")
         for i in rand.encrypted_urls:
             print(f"> {i}")
@@ -40,3 +40,12 @@ if __name__ == "__main__":
         f = file(args[0])
         f.prediction = Predictor.strings_predict(f)
         print(f)
+        if len(f.urls) > 0:
+            print(f"{BOLD}The following URLs are unencrypted:{ENDC}")
+            for i in f.urls:
+                print(f"> {i}")
+            print()
+        print(f"{BOLD}The following URLs are encrypted:{ENDC}")
+        for i in f.encrypted_urls:
+            print(f"> {i}")
+        print()

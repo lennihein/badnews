@@ -2,8 +2,37 @@ import subprocess as sp
 import os
 import hashlib
 from src.file import FileInfo, FileSize
-from validators import url
 from src.pretty_print import BOLD, RED, ENDC
+import re
+
+def get_domain_suffixes():
+    import requests
+    res=requests.get('https://publicsuffix.org/list/public_suffix_list.dat')
+    lst=set()
+    for line in res.text.split('\n'):
+        if not line.startswith('//'):
+            domains=line.split('.')
+            cand=domains[-1]
+            if cand:
+                lst.add('.'+cand)
+    return tuple(sorted(lst))
+
+domain_suffixes=get_domain_suffixes()
+
+def validate_url(url: str) -> bool:
+    regex = re.compile(
+            r'^(?:http|ftp)s?://' # http:// or https://
+            r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?)|' #domain...
+            r'localhost|' #localhost...
+            r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})' # ...or ip
+            r'(?::\d+)?' # optional port
+            r'(?:/?|[/?]\S+)$', re.IGNORECASE)
+
+    if re.match(regex, url) is not None or (re.match(regex, "https://" + url) is not None and len(url) > 6):
+        for suffix in domain_suffixes:
+            if suffix == "." + url.split("://")[-1].split("/")[0].split(".")[-1]:
+                return True
+    return False
 
 
 def rot(input: str, decrypt: bool = True) -> str:
@@ -45,31 +74,18 @@ def file(file_path: str) -> FileInfo:
     info.sha256 = sha256(file_path)
 
     proc = sp.Popen(["strings", info.path], stdout=sp.PIPE)
-    output = list(map(lambda x: x.decode(), proc.stdout.read().split()))
-    unencrypted = list(filter(lambda x: x.startswith("http"), output))
-    valid_unencrypted_urls = list(filter(url, unencrypted))
+    output = list(map(lambda x: x.decode().strip(), proc.stdout.read().split()))
 
-    # # debug output for invalid urls
-    # invalid = [item for item in unencrypted if item not in valid_unencrypted_urls]
-    # if len(invalid) > 0:
-    #     print(f"{BOLD+RED}SAMPLE: {sha256} - Invalid URLs: {len(invalid)}{ENDC}")
-    #     print(invalid)
+    output = list(filter(lambda x: '.' in x or '/' in x, output))
 
-    encrypted = list(
-        filter(
-            lambda x: x.startswith("http"), map(
-                lambda x: rot(x), output)))
-    encrypted_urls = encrypted
-    valid_encrypted_urls = list(filter(url, encrypted_urls))
+    valid_unencrypted_urls = list(filter(validate_url, output))
+    info.urls = valid_unencrypted_urls
 
-    # # debug output for invalid urls
-    # invalid = [item for item in encrypted if item not in valid_encrypted_urls]
-    # if len(invalid) > 0:
-    #     print(f"{BOLD+RED}SAMPLE: {sha256} - Invalid URLs: {len(invalid)}{ENDC}")
-    #     print(invalid)
+    encrypted_urls = list(map(lambda x: rot(x).strip(), output))
+
+    valid_encrypted_urls = list(filter(validate_url, encrypted_urls))
 
     info.encrypted_urls = valid_encrypted_urls
-    info.urls = unencrypted
 
     raw_filename = info.path.split("/")[-1]
 
