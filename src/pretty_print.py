@@ -13,24 +13,24 @@ UNDERLINE = '\033[4m'
 FAINT = '\33[2m'
 YELLOW = '\33[33m'
 
-BOX_SOUTHEAST = '╭'
-BOX_SOUTHWEST = '╮'
-BOX_NORTHEAST = '╰'
-BOX_NORTHWEST = '╯'
-BOX_HORIZOZTAL = '─'
-BOX_VERTICAL = '│'
-BOX_CROSS = '┼'
-BOX_NES = '├'
-BOX_NSW = '┤'
-BOX_NEW = '┴'
-BOX_ESW = '┬'
-BOW_ARROW_FILLED = '►'
-BOW_ARROW_OUTLINE = '▻'
-BOW_TRIANGLE_MINI = '▸'
-BOX_TRIANGLE_FILLED = '▶'
-BOW_TRIANGLE_OUTLINE = '▷'
-BOX_ARROW_BIG_OUTLINE = "⇨"
-BOX_ARROW_PHAT = '🠊'
+B_SE = '╭'
+B_SW = '╮'
+B_NE = '╰'
+B_NW = '╯'
+B_WE = '─'
+B_NS = '│'
+B_NWES = '┼'
+B_NES = '├'
+B_NSW = '┤'
+B_NEW = '┴'
+B_ESW = '┬'
+B_ARROW_FILLED = '►'
+B_ARROW_OUTLINE = '▻'
+B_TRIANGLE_MINI = '▸'
+B_TRIANGLE_FILLED = '▶'
+B_TRIANGLE_OUTLINE = '▷'
+B_ARROW_BIG_OUTLINE = "⇨"
+B_ARROW_PHAT = '🠊'
 
 # get terminal size
 columns: int = 120
@@ -44,40 +44,55 @@ def get_terminal_size():
     except OSError:
         columns, rows = 120, 30
 
-def print_centre(text: str, length: int)->str:
+
+def print_centre(text: str, length: int) -> str:
     """
     pads the text to the centre of the length
     """
     return f"{text:^{length}}"
 
 
-def file_table(table, sha265_len: int = 8, print_seperator: bool = False, limit: int = -1)->str:
+def file_table(table, sha265_len: int = 8,
+               print_seperator: bool = False, limit: int = -1) -> str:
     """
-    ╭────────┬────────┬────────┬─────┬─────╮
-    │ sha256 │  size  │  arch  │ GUI │ DLL │
-    ├────────┼────────┼────────┼─────┼─────┼
-    │ fa59ac │ 450560 │ 64 bit │ yes │     │
+    ╭────────┬────────┬────────┬─────┬─────┬────────╮
+    │ sha256 │  size  │  arch  │ GUI │ DLL │  URLs  │
+    ├────────┼────────┼────────┼─────┼─────┼────────┼
+    │ fa59ac │ 450560 │ 64 bit │ yes │     │  1, 12 │
     """
 
     get_terminal_size()
-    size_len = max([len(str(x.size)) for x in table])
+    size_len = max([len(str(x.size)) for x in table], default=6)
 
     res = ""
 
     # print header
-    res += (f"╭{BOX_HORIZOZTAL * (sha265_len + 2)}┬{BOX_HORIZOZTAL * (size_len + 2)}┬────────┬─────┬─────╮\n")
-    res += (f"│{BOLD+print_centre('sha256', sha265_len+2)}│{print_centre('size', size_len+2)}│  arch  │ GUI │ DLL │\n" + ENDC)
-    res += (f"├{BOX_HORIZOZTAL * (sha265_len + 2)}┼{BOX_HORIZOZTAL * (size_len + 2)}┼────────┼─────┼─────┤\n")
+    res += (f"╭{'─' * (sha265_len + 2)}{'┬'}{'─' * (size_len + 2)}┬────────┬─────┬─────┬────────╮\n")
+    res += (f"│{BOLD+print_centre('sha256', sha265_len+2)}│{print_centre('size', size_len+2)}│  arch  │ GUI │ DLL │  URLs  │\n" + ENDC)
+    res += (f"├{'─' * (sha265_len + 2)}┼{'─' * (size_len + 2)}┼────────┼─────┼─────┼────────┤\n")
 
     # print table
     for i, x in enumerate(table):
         if limit != -1 and i >= limit:
             break
         if print_seperator:
-            res += (f"├{BOX_HORIZOZTAL * (sha265_len + 2)}┼{BOX_HORIZOZTAL * (size_len + 2)}┼────────┼─────┼─────┤\n")
-        res += (f"│{print_centre(x.sha256[0:sha265_len], sha265_len+2)}│{print_centre(str(x.size), size_len+2)}│ {x.arch} │{' yes ' if x.GUI else '     '}│{' yes ' if x.dll else '     '}│\n")
+            res += (f"├{'─' * (sha265_len + 2)}┼{'─' * (size_len + 2)}┼────────┼─────┼─────┼────────┤\n")
+        if x.prediction and x.label:
+            cc = BOLD+GREEN
+        if x.prediction and x.label==False:
+            cc = BOLD+RED
+        if not x.prediction and x.label==False: 
+            cc = BOLD+BLUE
+        if not x.prediction and x.label:
+            cc = BOLD+YELLOW
+        if x.prediction and x.label is None:
+            cc = FAINT+GREEN
+        if not x.prediction and x.label is None:
+            cc = FAINT+BLUE
+
+        res += (f"│{cc}{print_centre(x.sha256[0:sha265_len], sha265_len+2)}{ENDC}│{print_centre(str(x.size), size_len+2)}│ {x.arch} │{' yes ' if x.GUI else '     '}│{' yes ' if x.dll else '     '}│ {f'{len(x.urls):2d}'}, {len(x.encrypted_urls):2d} │\n")
 
     # print footer
-    res += (f"{BOX_NORTHEAST}{BOX_HORIZOZTAL * (sha265_len + 2)}{BOX_NEW}{BOX_HORIZOZTAL * (size_len + 2)}{BOX_NEW}────────{BOX_NEW}─────{BOX_NEW}─────{BOX_NORTHWEST}\n")
+    res += (f"╰{'─' * (sha265_len + 2)}┴{'─' * (size_len + 2)}┴────────┴─────┴─────┴────────╯\n")
 
     return res

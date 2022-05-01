@@ -1,58 +1,31 @@
 import subprocess as sp
 import os
-from dataclasses import dataclass
 import hashlib
-from src.pretty_print import file_table, FAINT, ENDC
+from src.file import FileInfo, FileSize
+from validators import url
+from src.pretty_print import BOLD, RED, ENDC
 
-def rot(input:str, decrypt:bool=True)->str:
+
+def rot(input: str, decrypt: bool = True) -> str:
     """
     applies encryption/decryption to badnews strings
     """
-    return "".join([chr(ord(c)-(1 if decrypt else -1)) for c in input])
+    return "".join([chr(ord(c) - (1 if decrypt else -1)) for c in input])
 
-def sha256(file_path:str)->str:
+
+def sha256(file_path: str) -> str:
     sha256_hash = hashlib.sha256()
-    with open(file_path,"rb") as f:
-        for byte_block in iter(lambda: f.read(4096),b""):
+    with open(file_path, "rb") as f:
+        for byte_block in iter(lambda: f.read(4096), b""):
             sha256_hash.update(byte_block)
         return(sha256_hash.hexdigest())
 
-@dataclass
-class FileSize:
-    size: int
 
-    def __str__(self):
-        num = self.size
-        for unit in ["B", "KiB", "MiB", "GiB"]:
-            if abs(num) < 1024.0:
-                return f"{num:3.0f}{unit}"
-            num /= 1024.0
-        print('\33[31m' + '\033[1m' + "FileSize Error: File size too large" + '\033[0m')
-        exit(1)
-
-@dataclass
-class FileInfo:
-    sha256: str
-    dll: bool
-    GUI: bool
-    arch: str
-    platform: str
-    size: FileSize
-    stripped: bool = False
-    year: str = "unknown"
-    label: str = "unknown"
-
-    def __str__(self) -> str:
-        return file_table([self])
-    
-    def to_list(self) -> list:
-        return [self.sha256, self.dll, self.GUI, self.arch, self.size, self.stripped]
-
-def file(file_path:str)->FileInfo:
+def file(file_path: str) -> FileInfo:
     """
     returns the file contents of a file
     """
-    info = FileInfo("", False, False, "", "", 0)
+    info = FileInfo(path=file_path)
     proc = sp.Popen(["file", file_path], stdout=sp.PIPE)
     output = proc.stdout.read()
     output = output.decode("utf-8").split(":")[1].strip()[16:]
@@ -70,7 +43,42 @@ def file(file_path:str)->FileInfo:
     info.platform = output[1]
     info.size = FileSize(os.path.getsize(file_path))
     info.sha256 = sha256(file_path)
-    return info        
+
+    proc = sp.Popen(["strings", info.path], stdout=sp.PIPE)
+    output = list(map(lambda x: x.decode(), proc.stdout.read().split()))
+    unencrypted = list(filter(lambda x: x.startswith("http"), output))
+    valid_unencrypted_urls = list(filter(url, unencrypted))
+
+    # # debug output for invalid urls
+    # invalid = [item for item in unencrypted if item not in valid_unencrypted_urls]
+    # if len(invalid) > 0:
+    #     print(f"{BOLD+RED}SAMPLE: {sha256} - Invalid URLs: {len(invalid)}{ENDC}")
+    #     print(invalid)
+
+    encrypted = list(
+        filter(
+            lambda x: x.startswith("http"), map(
+                lambda x: rot(x), output)))
+    encrypted_urls = encrypted
+    valid_encrypted_urls = list(filter(url, encrypted_urls))
+
+    # # debug output for invalid urls
+    # invalid = [item for item in encrypted if item not in valid_encrypted_urls]
+    # if len(invalid) > 0:
+    #     print(f"{BOLD+RED}SAMPLE: {sha256} - Invalid URLs: {len(invalid)}{ENDC}")
+    #     print(invalid)
+
+    info.encrypted_urls = valid_encrypted_urls
+    info.urls = unencrypted
+
+    raw_filename = info.path.split("/")[-1]
+
+    if "P" in raw_filename or "p" in raw_filename:
+        info.label = True
+    if "N" in raw_filename or "n" in raw_filename:
+        info.label = False
+
+    return info
 
 
 def batch(fn, path):
