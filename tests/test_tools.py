@@ -1,6 +1,6 @@
 import unittest
 
-from src.tools import FileSize, rot, validate_url, domain_suffixes
+from src.tools import FileSize, rot, validate_url
 from src.pretty_print import print_centre
 
 class ToolTests(unittest.TestCase):
@@ -8,7 +8,6 @@ class ToolTests(unittest.TestCase):
         self.assertEqual(
             rot("iuuqt;00gffe54/dpn09719147393382293/ynm"),
             "https://feed43.com/8608036282271182.xml")
-        print(rot('.', False))
 
     def test_filesize(self):
         self.assertEqual(str(FileSize(71283371238)), " 66GiB")
@@ -24,3 +23,4 @@ class ToolTests(unittest.TestCase):
         self.assertTrue(validate_url("git.lostinthe.cloud"))
         self.assertTrue(validate_url("test.de"))
         self.assertFalse(validate_url("https://kernel32.dll"))
+        self.assertTrue(validate_url("bbc.co.uk"))

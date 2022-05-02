@@ -17,7 +17,23 @@ if __name__ == "__main__":
             i.prediction = capstone_pred and strings_predict
 
             # check urls of predictions
-            # if i.prediction:
+            if i.prediction: # and i.label == True:
+                rand = i
+                print(file_table([rand], sha265_len=64))
+                if len(rand.urls) > 0:
+                    print(f"{BOLD}The following URLs are unencrypted:{ENDC}")
+                    for url in rand.urls:
+                        print(f"> {url}")
+                    print()
+                if len(rand.encrypted_urls) > 0:
+                    print(f"{BOLD}The following URLs are encrypted:{ENDC}")
+                    for url in rand.encrypted_urls:
+                        print(f"> {url}")
+                    print()
+            
+            # # check stringpred but no lstrcpya
+            # if strings_predict == True and capstone_pred == False:
+            #     print(f"{WARNING}{i.sha256[:6]} | lstrcpya not imported but possibly badnews {ENDC}")
             #     rand = i
             #     print(file_table([rand], sha265_len=64))
             #     if len(rand.urls) > 0:
