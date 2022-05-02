@@ -21,12 +21,12 @@ if __name__ == "__main__":
                 rand = i
                 print(file_table([rand], sha265_len=64))
                 if len(rand.urls) > 0:
-                    print(f"{BOLD}The following URLs are unencrypted:{ENDC}")
+                    print(f"{BOLD}Unencrypted URLs:{ENDC}")
                     for url in rand.urls:
                         print(f"> {url}")
                     print()
                 if len(rand.encrypted_urls) > 0:
-                    print(f"{BOLD}The following URLs are encrypted:{ENDC}")
+                    print(f"{BOLD}Encrypted URLs:{ENDC}")
                     for url in rand.encrypted_urls:
                         print(f"> {url}")
                     print()
@@ -73,6 +73,7 @@ if __name__ == "__main__":
         labeled = [i for i in rets if i.label!=None]
 
         # print table
+        print(f"{BOLD}The following samples have been manually labeled:{ENDC}")
         print(file_table(labeled), end="")
 
         # print falsely predicted files
@@ -82,8 +83,8 @@ if __name__ == "__main__":
 
         # print stats regarding accuracy and predictions
         accuracy = len(trues)/(len(trues)+len(falses))
-        print(f"\n{BOLD}Accuracy: {accuracy*100:2.0f}% ({len(trues)}/{len(trues)+len(falses)}){ENDC}")
-        print(f"Predicted {len(positives)} positives and {len(negatives)} negatives")
+        print(f"\n{BOLD}Accuracy on labeled samples: {accuracy*100:2.0f}% ({len(trues)}/{len(trues)+len(falses)}){ENDC}")
+        print(f"{BOLD}Overall Predicted {len(positives)} positives and {len(negatives)} negatives{ENDC}")
 
         # # give suggestion for next analysis
         # pos_needed = len(true_pos) <= len(true_neg)
@@ -93,12 +94,12 @@ if __name__ == "__main__":
         # rand = random.choice(no_label)
         # print(file_table([rand], sha265_len=64))
         # if len(rand.urls) > 0:
-        #     print(f"{BOLD}The following URLs are unencrypted:{ENDC}")
+        #     print(f"{BOLD}Unencrypted URLs:{ENDC}")
         #     for i in rand.urls:
         #         print(f"> {i}")
         #     print()
         # if len(rand.encrypted_urls) > 0:
-        #     print(f"{BOLD}The following URLs are encrypted:{ENDC}")
+        #     print(f"{BOLD}Encrypted URLs:{ENDC}")
         #     for i in rand.encrypted_urls:
         #         print(f"> {i}")
         #     print()
@@ -110,12 +111,12 @@ if __name__ == "__main__":
         f.prediction = capstone_pred and strings_predict
         print(f)
         if len(f.urls) > 0:
-            print(f"{BOLD}The following URLs are unencrypted:{ENDC}")
+            print(f"{BOLD}Unencrypted URLs:{ENDC}")
             for i in f.urls:
                 print(f"> {i}")
             print()
         if len(f.encrypted_urls) > 0:
-            print(f"{BOLD}The following URLs are encrypted:{ENDC}")
+            print(f"{BOLD}Encrypted URLs:{ENDC}")
             for i in f.encrypted_urls:
                 print(f"> {i}")
             print()
