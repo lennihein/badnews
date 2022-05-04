@@ -2,7 +2,6 @@ import subprocess as sp
 import os
 import hashlib
 from src.file import FileInfo, FileSize
-from src.pretty_print import BOLD, RED, ENDC
 import re
 
 def get_domain_suffixes():

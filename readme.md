@@ -1,8 +1,17 @@
 # Do you even Lift?
 
-A Badnews Malware Predictor.
+A Badnews Malware Predictor and C2 server extractor.
 
 Usage: `./main <path to dataset/sample>`
+
+The program can either analyse a single sample or given a folder containing multiple samples. Additionally to giving a human readable output, find `output.jsonl` containing the results in machine readable format in the root directory.
+
+## Requirements
+
+- Python 3.10
+- Python-PEFile (+Capstone)
+
+## Analysis of sample set
 
 ```
 → ./main.py
