@@ -10,8 +10,9 @@ class Predictor():
         return file
 
     def strings_predict(file: FileInfo) -> bool:
-        # so far none of the delphi GUI applications have been badnews samples
+        # so far almost none of the delphi GUI applications have been badnews samples
         if file.GUI:
+            # but badnews loves themselves some xml files
             for i in file.encrypted_urls:
                 if "xml" in i:
                     return True
