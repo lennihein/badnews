@@ -20,7 +20,7 @@ class Predictor():
         return True if len(file.encrypted_urls) >= 2 else False
 
 
-    def plpc(file: FileInfo) -> bool:
+    def capstone(file: FileInfo) -> bool:
 
         pe = pefile.PE(file.path)
         entryPoint = pe.OPTIONAL_HEADER.AddressOfEntryPoint

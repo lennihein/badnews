@@ -1,5 +1,9 @@
 # Do you even Lift?
 
+A Badnews Malware Predictor.
+
+Usage: `./main <path to dataset/sample>`
+
 ```
 → ./main.py
 ╭──────────────────────────────────────────────────────────────────┬────────┬────────┬─────┬─────┬────────╮

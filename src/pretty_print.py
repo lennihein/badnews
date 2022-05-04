@@ -78,13 +78,13 @@ def file_table(table, sha265_len: int = 8,
         if print_seperator:
             res += (f"├{'─' * (sha265_len + 2)}┼{'─' * (size_len + 2)}┼────────┼─────┼─────┼────────┤\n")
         if x.prediction and x.label:
-            cc = BOLD+GREEN
+            cc = BOLD+GREEN # TRUE POSITIVE
         if x.prediction and x.label==False:
-            cc = BOLD+RED
+            cc = BOLD+RED # FALSE POSITIVE
         if not x.prediction and x.label==False: 
-            cc = BOLD+BLUE
+            cc = BOLD+BLUE # TRUE NEGATIVE
         if not x.prediction and x.label:
-            cc = BOLD+YELLOW
+            cc = BOLD+YELLOW # FALSE NEGATIVE
         if x.prediction and x.label is None:
             cc = FAINT+GREEN
         if not x.prediction and x.label is None:
