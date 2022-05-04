@@ -104,6 +104,11 @@ if __name__ == "__main__":
         #         print(f"> {i}")
         #     print()
 
+        f = open("output.jsonl", "w")
+        for i in rets:
+            f.write(i.to_json())
+        f.close()
+
     else:
         f = file(args[0])
         strings_predict = Predictor.strings_predict(f)

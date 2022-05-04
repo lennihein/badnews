@@ -1,0 +1,1814 @@
+{
+	"sha256": "00b1c7f81d765e13102f3f8a52a0e69f39b06bc729ae07b2b1745cccec64df56",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0192356a75f1f7c97cfc34f9e4f2312e32a97c7f7c862f995377e6387a3109f1",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "01daa59fde47ae68cdd3a101464d41b2026d8bae066bc41099035cf644667fda",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "03dce6ed5671a32b00dc8220f48fa6918eae90861d26d77d22d5e4243083b148",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "04322988ce10fc6b1b409c9c63e4b3d6ca4738e5277b680eb9c69e78986eec1f",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "05156693993be6c61a4870b88279ae1cbbdb78ac979d4ff63cb4e108c6f32528",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0528beb48218f970a8940868cb7be79f8b31d83348247f8c661236d97a8f0156",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0572c8bad7424a1a6be49bc3dcc9e708d0ad2d9ff798ca1143d02fa7bb71c9dc",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "05e5aac85910377c8bc9ccf2b368a4ab8666c0181db887dbcfe171454c0dfb97",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "06516ae9f76f765b186678f8774204c640fb1b7dad4840301072979edee9bd34",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "068046c9cf6379791781270fe65947a6ae2b4b4e1728041c6c0d97a7c4a71258",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0686d232ad680b98c2e0b3b0385861fd7ed563a0606bcd6f8dca4d142bc851db",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "06eddbd92663d1814e8db1ed2d1a134de3bc811d53eb9887325431e0f1f7a236",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "080fb617bc7176d5657fe0200a1ea630e756133dc7b54924753cc1ba69ed952d",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "08313a396d553b9c168cacfb6bd23d47a5ddff78db4426e2ac130df5f44bd263",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0845d09d48f73d51a76ad030272004b1547e24f99b4b7b5496df082a95f6c9bf",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "08751dc4e143ad3da55244d900b0f40101037978592ccc2d295d77716c450cbf",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "08f5145a133749e855e0a5a17de5ea1ca532a31b0cf9c4929ca60772e830a0bc",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "094036dedf3b4c8f4c48576ee8e1023a6abb7f0b6d30d53434e02744837ab566",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "09fc42bf2e7182921d998b2e32afc34c066c8df86050512a29fc641ca755c772",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0ada143e0b674b3dc52743d1602dfd60ed9cdd56c3f83d7ecf40e88ce50d78f2",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0b849e5b5b75c72010348f80827efedca3f7ba628ab43cdf6c8e107da7f176bb",
+	"c2s": [
+		"https://feed43.com/8608036282271182.xml",
+		"https://raw.githubusercontent.com/rizvirehman/rh0m/master/xml.xml"
+	]
+}
+{
+	"sha256": "0be461912d18a2883adc66f903fe0861183fb9ec08c63717e7f88b33b48c4cbb",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0c283d2e3228ce4eec7c933658f9df27e0db22620d29de0dbc4a24de5e86bf14",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0c61c007a909b31ec842003261f34eeb36e10286f5435a4e81c0b23c642e32cc",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0cff94c866d5349352174b66a735752a07ff9005f5762cf077f215fb45d6dbe4",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0d0a14aef390365d6649397062b956d433c5c33d4f229dad2eae8ab9aca36d84",
+	"c2s": [
+		"http://www.webrss.com/createfeed.php?feedid=48771",
+		"http://feed43.com/0236014816401653.xml",
+		"https://raw.githubusercontent.com/Vldir/readme/master/xml.xml",
+		"https://muzik79.wordpress.com/2016/10/10/muzik-shakes-y0u/",
+		"ab0bz.chickenkiller.com",
+		"ab0b0z.crabdance.com",
+		"ab0bz1.jumpingcrab.com"
+	]
+}
+{
+	"sha256": "0d1c07c2232e9c99b657eba3ba057404828005fd050df106692fac7ad01f2826",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0d4e5929ea39ecf0ad7c3cad71fa7b42a1ffb7b18a4253ecb563d0477d8f929b",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0d51bae8608e875ff22f727ff7e259c0588d59d1cc723354ca2cdc53a8559216",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0e82be7888102761914b61e0d0df9d0166e84a23249162bf17ac10c9b9fe2b40",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0ea125a74caef4eda247caaa668bec29abeeefbb07f1e9652575fc3a52082dd9",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0eec136f059509eee80bb0f7cb98569f91e36f8dd34e81818f2151b1146548b8",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "0f1dbadc255142860b4c702e42f750447d048a0e7a9aabc8394b6f86ae48616f",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "111765096e3a4e42cb56ca24031ef6255c1c85178130133dd777b25e236f2c13",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "12247d199abb0dbf81620305bdd1e90bef650f81979ae4bedd535b130d1f55e9",
+	"c2s": [
+		"http://www.webrss.com/createfeed.php?feedid=49455",
+		"http://feed43.com/1131452480516155.xml",
+		"https://raw.githubusercontent.com/s0rgakz0ki/test_project/master/xml.xml",
+		"https://rolexcro.wordpress.com/2017/03/17/my-biography/",
+		"rasc6.crabdance.com",
+		"cr0w.ignorelist.com",
+		"jacks0n.jumpingcrab.com"
+	]
+}
+{
+	"sha256": "125dd6ddb7f9c26f03ee5815da41383b3b83bcd24ba0cbc7dad74c89d9a8d6db",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "13376993a30bf04ea4d597b99c263f3afac676c263e01bfdb9efb7d8de4a1ef5",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "1381241eba3deeb60a2441c74aae16e80ef244cfff363d2812d663583b485d21",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "139e34cdcf969d0b7ba67f721edbbdbbef0215fd2134c1006566792ba23d203d",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "15dcaf3a20ff778924a08a308d97269eef4473a1460962cb54046ca90ff7473e",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "162a9f38ea4c725ba4a8b6f45b0f30dd70d141e16c48dcbb7b7962baf85cc5dc",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "177d03451621c94cfa8e4dab29575e91a6c1211273f677e296f98f7847664268",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "18fffcfe8372f8e83bdb79093880e8cd7f6e29321bebe8cdff9239ed69408f06",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "19215080523e33e7b14752a594820a1af9d602a791a7f39a716cb0d039ed5bd4",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "192e6f3a00395d53cdbd333d0126358c851453f491bedfa6e6acc9ad29c674a6",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "194e1b6695bf4803af4cd0ef4d5f6c805da6afb9049f88cc8c6bd3060d0da0b9",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "1c63ee0000424b0e3c3880900b2572d235aeae25291aa573a03fe1fce16365ae",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "1d6e087afdab9f76109a27a0e5e31341826afc94ada526e7d2503949cf24d49a",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "1de546bffb07135226a27a5f7e7e28f03cb7b5fe10a512335011d2167022fc81",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "1ee4224a27ea63f5a5fa7c17b9aad0893a2b0f570fa546c41c4bfb3ee9c7b376",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "200f3102c4f67bb2d7b145d2432072123101ee65f127de194cd2e212c81dd609",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "207b772b58a38563591d6281772bda57b60317160a6d82b7fdd76c2e5df0c3dc",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "218d2d01b1d0430cff64793e0bc9ef2b83b29a0f5096b2f03616570a1ffc78b0",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "23566b56b52de57cb7729a9b2ce5f7aeff544ae84692405b2342468fb547a3cc",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "23b1b14009be9fe00f96b66553089d32d5ecac075a2c7c87af6b531489f7fb70",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "23f3fbd2f37e1bd1c4f78c13daa931446e1a9a267a22f3a0bdf8c20378ca0ce5",
+	"c2s": [
+		"http://hostmyrss.com/feed/niels_bohr",
+		"nielsbohr02.serveftp.com",
+		"nielsbohr01.servehttp.com",
+		"nielsbohr03.webhop.me",
+		"nielsbohr04.serveblog.net"
+	]
+}
+{
+	"sha256": "24447f43ca0502057b5d98b3bf872523fe2ee6207b6929505cf340c688119b99",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "2796923465a962d79946762780330189b117154dfe690de0ac922da9a7fbcb8c",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "279cd21dfdf8c2e9af747d53f7d3e20a7fbdc08a45c2b380a83cb63c53004d93",
+	"c2s": [
+		"http://www.webrss.com/createfeed.php?feedid=49680",
+		"http://feed43.com/8574051710018640.xml",
+		"https://raw.githubusercontent.com/os-laden/test/master/xml.xml",
+		"https://fitness3195.wordpress.com"
+	]
+}
+{
+	"sha256": "289dcb3772a2a450bb32a893898f05bfbf43b77823c43851eed048caf74a33a2",
+	"c2s": [
+		"http://www.webrss.com/createfeed.php?feedid=48771",
+		"http://feed43.com/0236014816401653.xml",
+		"https://raw.githubusercontent.com/Vldir/readme/master/xml.xml",
+		"https://muzik79.wordpress.com/2016/10/10/muzik-shakes-y0u/",
+		"ab0bz.chickenkiller.com",
+		"ab0b0z.crabdance.com",
+		"ab0bz1.jumpingcrab.com"
+	]
+}
+{
+	"sha256": "290ac98de80154705794e96d0c6d657c948b7dff7abf25ea817585e4c923adb2",
+	"c2s": [
+		"https://raw.githubusercontent.com/lctst/testlct/master/xml.xml",
+		"http://feed43.com/3210021137734622.xml",
+		"http://feeds.rapidfeeds.com/88604/"
+	]
+}
+{
+	"sha256": "29327e4e6b50a3d98177b674c675a2fd6776fdb0376858dca80b9304e6879c15",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "2a32986d62d32bac89603e23b136b88823daa3196cebae05166371cd5fd1586d",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "2ba5784ba0c4d138c945551e7c31ee0fa8d43a1278021a0ed127456c66e4c94e",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "2c8792c29dbb1ec6e46ac2b0e942b4b8987f7f220374f25bc9b9ac2d2e536dbb",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "2c8841a16ffc08c23bcf5a8a7688d660f6c208a9c1854ce6875fcb3e8c60fbaa",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "2d5627c2f712197aec0b6b24a538c887da169219748c6f8686895d8b5ce94b5e",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "2e18fc927b36fa63813ea7314db3f33a363e786c9805e49604e8eef52e3fd09e",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "2e69714aa40b19b139ee09b5e242851292e4a379debce52be5c5c7bab3bc9210",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "2efd97fc07e4b55893681592d5749c2bf369b1e33df58d93f313992294d47268",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "2ff0f7f3891db1287311e70c060da948a0905e24cc8deb28a8dbdd5eb18c5233",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "306a350f5fd101ff477672782f395297af258b204db473004ea412c119a5645d",
+	"c2s": [
+		"https://raw.githubusercontent.com/habrew/tests/master/xml.xml",
+		"http://feed43.com/2640775070507127.xml",
+		"http://www.webrss.com/createfeed.php?feedid=49891",
+		"https://muzikloverssite.wordpress.com/"
+	]
+}
+{
+	"sha256": "306fe4101dd6edf2606a282bb56c15168344e5ffbfa7652a5abe3b5335a638a6",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "308daf62e6780dfb1621f13f45a320694f8cdb66e96e24a1e2100f0958539407",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "30eba751de70949ca704e4664a50c1de1a5f26f2e2692a01681f5a5ae85d769a",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "311ae9072f68809b7ca3cf6def6a63902f5f87afdc7018f66a640266bdddc0cc",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "31297bc78b4d3108633cf3d8b7f034b606adcb9d2ab8663e994b9ccddc8b93ba",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "312f5bc06206495c4cdf8d7ff94c8cb87cc7502c40173bd4a753389c3a830dd2",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "31435062f61706419ef35f4d0a86c4c7c888c870c7c4f12814f8c0e0e9730fe9",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "31c0b27ba9c8492eb8e3267795ec0e28c6b4699a7ac68b64d21923aee69f8436",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "3262e224332b95de4f736d4f79fc7f98b780f42c0e8e898df9ae46cfa3879661",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "34a5e9efaf81e9024798e1134a7fa8221492a0d10f5104d54420e8c516c1d96b",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "35b4b9e6ce105affb3d9516f0101b771f78ee61540329f8fd7de5868ca3291ef",
+	"c2s": [
+		"http://feed43.com/6021628058817160.xml",
+		"https://coffeemesmarisingmoments.wordpress.com/",
+		"https://raw.githubusercontent.com/petrov1alexzender/readme/master/xml.xml",
+		"http://shopsdestination.weebly.com/contact.html"
+	]
+}
+{
+	"sha256": "35c7d9dfc973ac212d33e456804be58133a9809a963bcac4bc7ae7424c6dd134",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "35e295677414d831c34d09f1ba861d78a24c0d340b8ebb2948318a875ee936ba",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "3661b0e5bb5a90865fd2a650c1d3b03b918b9dd0921401673b0ec9d8f116e4bd",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "376062ba58875589a2fd32e68f46623a3d78a6711df1531dd47408ab31dc7dbd",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "37be21f43927d040f86f937e9980aeb3e70bb6bae5f08a8df2af47141b47376d",
+	"c2s": [
+		"http://hostmyrss.com/feed/gam3s",
+		"tomberenger03.serveftp.com",
+		"tomberenger02.servegame.com",
+		"tomberenger01.servehttp.com",
+		"tomberenger05.servemp3.com"
+	]
+}
+{
+	"sha256": "37c6c9470617b5f22c4aaf291843bf2f24c702df468084d6de12bead779c62b2",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "37d76765dde5106b2b6d981933f56ec0910484ee20b377165bede49eececda3c",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "386c119768a5fe88dbcf9c95990ec03f4e2244cccbd17ee0d6a845280379483d",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "3a8974153c386ad42788a6ebd22de7564a9cc3eea6551245dd0e91dfd6369349",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "3aa6f917f9c32273b2c4f3a99b39277f70d64abc4832c64cdb4e5c84c45124c6",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "3bc3a5ed60a7ca95b65db6bdce72e9d6e21c1abd77c5b10a2a7295759044464d",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "3bf8bda2626a002857f29435fd31b5b5c79feae7f35a0c48416e431e89e5eb31",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "3c95ee06cb03637e8b47a0e392818394ed8a1cd2d264dedbb57f9dc410794c00",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "3caeabd7cbeb5e305c627fa501f19f91f21e3d31eee2e289dc43c6a669f069db",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "3d2777a160546f39f04eb23e5530f16518686283587b15875d1dbaa2234b7219",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "3e3f1de539e4babe9e0f8c6a522bf581fd67eed758697afff8fff6fdde938c85",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "3e74ca211a910d2b3febfc1d9438cc6b5e057caa9f126c7d0fc6f3bf9a977b58",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "3fb0e9156b73079440561427a0fbfa60fb6d087a03fb072943592ec32b5d6b12",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "3fedf73e5571e15cdd1e8a1825cf6cea00456f4fd49158d057b05e5a9b94d186",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "405788f6223f44b0ab1a74a81569441d85a55b12e191e18ed1b1701c582278db",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "41d6e2678ada892b3281cb5b2ab3209cb32bc9a5d5137727f884f12fbf3ab147",
+	"c2s": [
+		"https://raw.githubusercontent.com/hazkabeeb/testhaz/master/xml.xml",
+		"https://feed43.com/4641331765241618.xml",
+		"https://feed43.com/8827658730366571.xml"
+	]
+}
+{
+	"sha256": "424f38fcfa77cdc10169f7fc23b79d3b6872e77d2ec0eb63ed7dcd3cb5e3ee50",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "4259baf6b7f4d864d093b10271aed0ab01d744e3f6bff0ff0820e6727997dc00",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "448f6b226a1c0647e8e63f25c9a147344df343be03879547d7c7d11ee07257b2",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "450323cf876d5e4eeccf41add64e527531ae965d83aa9c1279f8923c88ae11d0",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "457f28158b3e361d5b2f3b387855c49e94798c10f5491704b23cc96620f00f62",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "469df70eeb23c7b95e236fecfd6af1f24c2f3516b2d46a413a3a48914cbb2570",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "4716bc45804c06d00518413ff48dd167bea0e6e9e0507127f01c206d9227a2f1",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "47d604d340a0b25679e525babab1a5a85053d441dd95d0312862b259363c8a15",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "47e0886ba064156d7914db02dec46fa8f497b20373c7f2d4bc8f3f13bd8fa455",
+	"c2s": [
+		"http://feed43.com/1462256483876401.xml",
+		"http://www.webrss.com/createfeed.php?feedid=49881",
+		"https://raw.githubusercontent.com/parvezshareef/test/master/xml.xml",
+		"http://tourntrave.weebly.com"
+	]
+}
+{
+	"sha256": "4994a804c64b1a1c20b566167e32c454c424a09328c8b62fdbf6193360a92012",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "49d08ff05bbe4a77e748dc8903b9d976a9b2176054ddfaf684c5699e84204f30",
+	"c2s": [
+		"http://feeds.rapidfeeds.com/81908/",
+		"https://raw.githubusercontent.com/azeemkhan89/sports/master/sports.xml",
+		"http://feeds.rapidfeeds.com/81909/",
+		"http://www.webrss.com/createfeed.php?feedid=47444",
+		"http://www.chinahush.com/2014/12/27/can-common-views-of-chinese-women-be-changed/",
+		"http://www.repeatserver.com/Users/sports/news.xml",
+		"http://www.chinasmack.com/2016/digest/woman-discards-her-food-on-shanghai-metro.html/",
+		"captain.chickenkiller.com",
+		"rasheed.crabdance.com",
+		"raheel.ignorelist.com"
+	]
+}
+{
+	"sha256": "4a42d2291053a1bc3a718f0e15de892e4d759b63a953e90462bd620d3c4deaa2",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "4ad6ae651982a96dcc856e2068fde05f99f6809cb8b8c115c055bdee1bb671da",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "4b73575de3281ddb7753babda17fee6b61a73bb3cfe386d7ca6972b3507640ea",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "4c1384555508f778424eb533c0d11bbed096e4460d7c9c4536d4e5bec92afa72",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "4c5c78689a38da28baaa0249d3fcd2f46fab055e868415c55d25b7c0b731f30e",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "4c8697fd907714564a3f64bb811b38038de36bb00ba15abb7ac969145432b450",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "4d95f0fb27a446a4d42615c2190c589f5c31d0706be886b92ffa92b1895d3590",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "4e4de02f58ed7827639389ed543326aea23d0435468cc13f605219297d0ea7cc",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "4e8e46e6a91c79d0fd21a17749936e072285aa523e2d68654e5028257ff38c81",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "4ec1856bd5819a7edc96ec40c51acaa9d3045e2d0ea5f83459a4901371caf074",
+	"c2s": [
+		"https://node2.feed43.com/0056234178515131.xml",
+		"https://raw.githubusercontent.com/petersonmike/test/master/xml.xml"
+	]
+}
+{
+	"sha256": "4ecda6207df3103d634d665927fd92d9d640335e94d74c41a8d4316892beacd5",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "4f585b6d17aa1c2a53c20c8eba46f9791870d897d5eed592efb82ae46ee1e19d",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "4ff780599b325283043868db11d208af5385332f1b19d2920fe8c90a141aff24",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "5044e35eef817db2b534865cfcfc4f0c1c713c01d894fa047fd7de2143457c09",
+	"c2s": [
+		"https://musicall12.wordpress.com/29-2/",
+		"http://overthemontains.weebly.com/paragliding-stuff",
+		"https://raw.githubusercontent.com/Zunaid-zunaid1/project11/master/xml.xml",
+		"d0nald1.strangled.net",
+		"d0nald2.strangled.net",
+		"d0nald.strangled.net"
+	]
+}
+{
+	"sha256": "505924f11400400103d360afded09bb3c7abb63b264634aa46d27e6fc6ca903a",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "5174353950b7f805388db242f6bd520a6586524f19633812657bd09263842568",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "517d22478b1a4bca661bce6a1e7928f5cdbfc939bea25ce5da6553b19dafb2bc",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "51efba9033000f9149a1209203f9e6a5952d4ca748300786a0c9661d0db011a2",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "5206c1b1abe5781b5b4d546b9cd3b148898e7750fe3942527fa582bd7db8c2be",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "525a5990e2c18f60590952c0f661fbe4810764527888fdf9bff429a655abd1c5",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "530d2bc323b11fd834070c14c1cab8986aed2769e391769d66f14432cfce5f2a",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "542d6e27aa47b6f45294cc3dacb8f70204e4b38229917afc30a723963979fbd3",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "55a2616dab1717ba516afccd6e0efaf3fac26af70b2812daa82e4a99dab08171",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "56c0a71f4342cf52d327c38a313727b2c6c82eaab4b3de77a9d6810257d674c3",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "57217b51b5a7016bbfda7741dd255af503dfeaeb9383dc8e44cade9ae2c284e6",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "57b54a64c7636e5118920fe3ec90e342891d8da7a9a6b77757094eb93739826b",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "5842bf5dde3176277e8e6419a5cda42ac4b313690d10ae1be552fc3b678bce38",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "5887b984fc6bce0026e4d62ea11797a5abeafd8c114d075cae7bea142ccb7a1c",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "59d0db73d7dc56454c6e6c4a4f4cee245984f5e7f22ba5bcd074ab14ea27aa1b",
+	"c2s": [
+		"http://www.webrss.com/createfeed.php?feedid=49312",
+		"http://feed43.com/3633203283037025.xml",
+		"https://asdf478.wordpress.com/2017/02/13/hi-everyone/",
+		"ch00se.chickenkiller.com",
+		"https://raw.githubusercontent.com/devonkearns/ytrgfvr/master/xml.xml",
+		"ch0ice.crabdance.com"
+	]
+}
+{
+	"sha256": "5a7bf714589de80f37110def8b473f82c08de1f23d532e8ceaa1dccdd5aa1878",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "5b730d3f96ff2f155e9b6141e0aa5346fa16b24006325ad9397805bf51f3850a",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "5b7fdc320e108e58045f210360c0f9486beab37860df605da01deddca9950f1d",
+	"c2s": [
+		"http://whgt.steelhome.cn/xml.xml",
+		"http://forum.china.org.cn/viewthread.php?tid=175850&page=1&extra",
+		"http://wgeastchina.steelhome.cn/xml.xml",
+		"http://wxycgc.steelhome.cn/xml.xml",
+		"http://blog.chinadaily.com.cn/home.php?mod=space&uid=2392255&do=blog&id=35101#quickcommentform_35101",
+		"http://www.itpub.net/thread-2055123-1-1.html",
+		"http://wxkysteel.steelhome.cn/xml.xml"
+	]
+}
+{
+	"sha256": "5c0b1e82307dd9d83d881edee4f52f00c01c0d62862d5d655fa7593985cac5ec",
+	"c2s": [
+		"https://raw.githubusercontent.com/dawoood/amnigomestro/master/xml.xml",
+		"http://feed43.com/7855632650435114.xml",
+		"http://www.webrss.com/createfeed.php?feedid=49922",
+		"https://starsrlikestars.wordpress.com/"
+	]
+}
+{
+	"sha256": "5c8bbec4dba01acb5b5583ff88810d5eb7fcef4de616a682397c7c5c581aa511",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "5cdcd635aa740fb8411237bbcdf387c725dec10c122fadd8e1eaef801e8d24a6",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "5d3f65c3b46d5e274d4cbadef4fd59a022e2863e6adb4e91e384fb47014653d8",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "5d6db741bad15ef0a68548d511a84887d9bf048161ad7925ccaec0967868af41",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "5de6fac53a5b68ff87f562fdf3a5103ad485a31b11878c00b3be371ab4b459a4",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "5e01e9dccd41ee7884cdd86e5c20cc56a8f480c623ca88a9a0921decc3f101c8",
+	"c2s": [
+		"http://feeds.rapidfeeds.com/61594/",
+		"ussainbolt.mooo.com",
+		"ussainbolt1.mooo.com",
+		"updatesys.zapto.org",
+		"updatesoft.zapto.org"
+	]
+}
+{
+	"sha256": "5e21767e267dc44026b4dc3059243e476de95b9eee538167e6937e1b5cb646be",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "5e3ec8bdea7ab202c05db6ee33f57e66406fb82f9f79109ec78973625f6d8f7b",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "5ebdebf99960a8be94ed4a50d7cf23f3167ec6171463007545f1069f60bded90",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "5ecb4bdec6576ee54c7bf97c730f1d868d8880133141574ac0dc76e4796b29d7",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "6001ae39b2155d07d45bf96c893f36c98fb420f9dbc893d141bffeb25e105b71",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "60fbc84560eb93e36a3efdf0bfdcaf9b8a57a83afe991e38f3d642e3dfa9cf0a",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "61594db8c80a7ad8edf350eedd81fe1164f2f7f7a5deacc80a409091e95fccf8",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "616f1e8b76addaec08fd4a7dadcab032dcbd82414afd208366231058f31105c7",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "61e0557ba229883a2ec9a0c5beb3dad59caab04b845891b20b699b764d705403",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "61e2a4eb4c24fd79291725b41d9837c79b5c4ec73ac6d488c57c1be9fffc2a0e",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "61e93cdcf10a1cc1b3dd03904d69c33cb0e0495ef1c6dceddb3ea1334f1578c2",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "62708d08257dd21211f125c4f28cb12b1729e24b2f42eb350ddc03e17ce0e07e",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "62f43bca986b288a1afdd7337f7f1065ab56b180c1d6ff2b8554660d0614e325",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "6324eac5c3f10381d2ce75c867a686e96cb4b9f8b2b17a44b3948db069ccb98e",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "6357942f17177086a33f44c33cd3781dbc152fa00fa53ffac27aa2f887bf84f0",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "644d049b29d7535e4ab5744c5eff1254fd04b676ab97434899acf8df71db348d",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "647b7a619b3ef6fa76b3e710a3f20b78a0a8ab6299b9245a893052d7b94b62fa",
+	"c2s": [
+		"https://raw.githubusercontent.com/alfreednobeli/testro/master/xml.xml",
+		"http://feed43.com/5170483112026631.xml",
+		"http://www.webrss.com/createfeed.php?feedid=49942",
+		"https://bechesbeautee.wordpress.com/"
+	]
+}
+{
+	"sha256": "652c08defbc8fd707c2b7a95af9b254ee4a0dbf2dbc727fdc4de7905ae038a83",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "65c28c71a92d8ea43a23f96b6027d4c60298e3052e0f9a8abd33be80ca4c0279",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "66057eaf0841e717f23c757ac19b1ea596a79b9c2309dca5943fdf68efbd4cfd",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "678fbcf3c3d9edf815559126a83528ab13b2880904c087faa32295759c382902",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "69e7ded510d6f0fc6a76970b8350e76113a4987a71130b66210c3eec93c01554",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "6ba9151375ac6021ad781cb3eabca173db7044aceff56375a71d3513f595728b",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "6d7383ae85242ba3d9ce6adc9fae6ab3c3e009715000e1953bb0ec573d0addc5",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "6d93ea50b89e8c535ba642ce8320607179b5d204d08e51791b5e2c51ffec3443",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "6da23e62accd8e626c7f38b7c5dd54702624b3761a0c352c5673f58ae231804a",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "6dc78a214d04c85884e4df3cd9208ce0c4ee834b65eb57a3825113de38b214a0",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "6e2ef8f003ebe5f72f885367353f2511c8bbae2ba70b1411ea5f66d1d1868aeb",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "6e3dfea7ea114800cad28e10f87cd10476180a46f1ffc18844ddaa6e42c8e3c9",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "6e98e4cd6130824eb69a7ec4849af06175705f8cc67432500ebc65ed9d693445",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "6f2371080454a782e36ba7ef2e75788573dfac6087c51c7862895c53db8033e7",
+	"c2s": [
+		"https://feed43.com/8711803854873534.xml",
+		"https://raw.githubusercontent.com/alexboycott/metest/master/xml.xml"
+	]
+}
+{
+	"sha256": "72e58f1dec1fd6a8ea2fdf8f370c3de406d11612048edc8a9baea337ef7fcb4a",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "747199cfdd09d820de3b99012366424b74919bb5ade0ebe92828b482d38ca5be",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "7486e78ad7ba7a87ed700c45ca6f4ad93f4ee93cf8d5c0a3fdbfb1cce79908bf",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "761fb46ad6eff49e88ad7479cc8e192cf6ae385e4d1225f2edde3d906b7867e3",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "762d90e0a85a37c67d38f3db32867492a27d5708fe129bf74424e9c1030a0d06",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "793038d04e14e282a45e3321d95467f1aa2fcbf008577861b6a726ef39402b1a",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "795cdd1df65c6d3534914ccdee1f131d17bce336d8ccf082c741939bf16f14c8",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "798923e236064e5bf54573b5701219f13853b7d704bc23d45b3191dd9096af76",
+	"c2s": [
+		"http://www.webrss.com/createfeed.php?feedid=48771",
+		"http://feed43.com/0236014816401653.xml",
+		"https://raw.githubusercontent.com/Vldir/readme/master/xml.xml",
+		"https://muzik79.wordpress.com/2016/10/10/muzik-shakes-y0u/",
+		"ab0bz.chickenkiller.com",
+		"ab0b0z.crabdance.com",
+		"ab0bz1.jumpingcrab.com"
+	]
+}
+{
+	"sha256": "79c86d69106b23f569743c1a23cca5016bde5e10a61df21b5f126eb143619c5f",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "7a85399a031eb41d6152aea69fb140c776b4b8246e0025cd49f446ec1973aac8",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "7b7f138b492ff36234e381e259f10db200c3f69c2821e2b3247c8ec8356ba1ae",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "7c33bbc9165d934efe4fc7a17117149ea959163a7c77489b155e52a24555c567",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "7cc0b1c7fdc539dffddaaf9329e0fbd7e600951be65dce3b8e306ca54bb6686b",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "7ce9d8d934d0f37ededfe1418af9e3dcb5396ba0efb1ebc14d0c147a0736da48",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "7d63d73850d154d85539d28f0fe7f882c288ff3c97a3e0b1f2024e8f344e8a75",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "7d990e3f6cb2f90c30e7a8acba23fd3ca6ea8a4d6ec2bc3534628c8f0c4877b2",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "7dac4db05d7f58cafe637291746a905a9090e6d192415b44d3d170e0208d4a78",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "7df195ca0191919c7a0cf0a7b6455debbedf11263a8dce60378be8c8396d226d",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "7df5a7cc9d3bdc046b8c255f8cadf969c671bcd9854d647e946e5d0a044629de",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "7f178b5da0cd531095b68813ce9063d80d9948ae561307e6af435328a9f59cc0",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "7f8aa86cf7bde03d72ebdee0bf4122efcbaedcd51d1ee259827cd03e85eeb194",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "7fceae3b97e2e539100dfbe4480b0cad3bc6254650dd8f7cf5d02f077a828c55",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "8001affefb3436bb4dba314273c250de96339c5da3bf227f0a0ecc7b8d431b45",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "80221325c447b400eec3403acfd3ea129dba43a1919a713972afdb576572a9c2",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "80e627e1067a7d0c778a3e7318f2745ceb852d39608ccd88691f7e388af3c4da",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "822f05b2758abdaa3cb58cd9effcd0e7748dc59da0f7be2b36e4c54b86f0eda6",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "82f0c740c7f96be27278fd7146e6f3786e19405df87c1536e68d1581d562495a",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "838125a1c4141254c771d3f0b2fc9b70605209ba729d6900244f320ef8a8c3ab",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "847015988b3ea8610accc2ed1bea536c83e7d9e6a8841219665e7f893ed10163",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "8475c26a12e870281aceff460d4b0cc3e81b29956b17b3c008e6a23cc14f0921",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "85546d57c0b52d378f60a61d53aa84f189113d4f0c9593a2e40aa5a83635d873",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "86ef9c846555cb48da435f3efd47befbd986e35368ae051c1be898d3b059badd",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "879de0cfe1e29fc5868c148bf196013c8832695c9de2b42a2fb0b91764ce8490",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "888dc02be099bc75e4977ae032a8696c8fe346bd4eaa439092dbe2e01582800f",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "8960c7e9e779b1272ca1eabb9a00ee824df7ff2e7c81ae25d43b686963252c71",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "8a35e120847cfe2d8878346418e4781412d2f5da082345f9bf3720a77862f688",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "8a36e9fa042a55a6fe38902fa6361e484b631d9128f465f4e87dc67bd4c7e170",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "8a43b39ef7c077a1c11cfa70ad0af497691ba47bf56ef292c043074e3cffd6c0",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "8ad831e2cc15689f1788496e0871207518e45afbf116d2044263ac72fc2dea10",
+	"c2s": [
+		"http://hostmyrss.com/feed/players",
+		"yoshimato01.serveblog.net",
+		"yoshimato02.serveftp.com",
+		"yoshimato03.servehttp.com",
+		"yoshimato04.servegame.com"
+	]
+}
+{
+	"sha256": "8bff936da2149efcd4277abd7922516dee179781e682c9e511f04c15c3e97f40",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "8c656ddc427feeef7a3e8762b108af2060daf7ceafb17be59e161e2db742aee9",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "8e0574ebf3dc640ac82987ab6ee2a02fc3dd5eaf4f6b5275272ba887acd15ac0",
+	"c2s": [
+		"http://www.webrss.com/createfeed.php?feedid=49321",
+		"http://feed43.com/0414303388550176.xml",
+		"https://r0nald2017.wordpress.com/2017/02/16/my-first-post/",
+		"https://github.com/r0nald2017/project1/blob/master/xml.xml",
+		"r0b1n.crabdance.com",
+		"r0nald.ignorelist.com"
+	]
+}
+{
+	"sha256": "8fe84aa9ac5fc1493998fa8138d3c90b124322f4fba4f88e7d9947fda4d5b931",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "9113c48ab940c7353ab053066827443f81abd27126aefd51fad9e2ef2b9ea6ee",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "91d42818ae2d51dd317db635eae4a742324358882f34e49565558d5a44c5a655",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "92251120db8affd45165543911b528f8681d78c31a8b9eca4e35e0cce92f6d3a",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "954647053ebda84e797afad2719e7520765e49b7b9f4cffeeda048ecd3e5555f",
+	"c2s": [
+		"http://www.webrss.com/createfeed.php?feedid=48771",
+		"http://feed43.com/0236014816401653.xml",
+		"https://raw.githubusercontent.com/Vldir/readme/master/xml.xml",
+		"https://muzik79.wordpress.com/2016/10/10/muzik-shakes-y0u/",
+		"ab0bz.chickenkiller.com",
+		"ab0b0z.crabdance.com",
+		"ab0bz1.jumpingcrab.com"
+	]
+}
+{
+	"sha256": "966731c7f2d7635a6f798a6fe9dc670c36a389116a9a1d301863bf08b1551c61",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "96aa29feaea93cd81c278c67f243f97246b57d5f99de9e955f5932c900bd9d75",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "97e1280439cd8bbac8b373d8b4d4d11cc03253f9caa19c6a79823b96def1c373",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "97f49c46ef694541b535064712db16868e1a121826670695bea7542857eb477d",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "99f149e68747d86af1ff4570ce5a23cf19afa2f80d83d62fa49fd4bfb12a45ba",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "9a4809247a2646c478195c181c65d51a898292132fc8f84f1e4eed600af60df9",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "9aad53bcea04cc1e4ee136b3581ad0ec34769efe4feb906f3766688c4fe13bd6",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "9ac60501d65257d4bc4abf59b1a4ae05af7077f753b48acf7261c9c93746bcf3",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "9b20bee9524152903e31e2c96d91a19cde47f7d24a60cf51f33b2e521b04d891",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "9b72696620094ce583c8043bef270f8515e8d8c9bebb3777e121fd947b067d14",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "9d1d796782f3d5b94455bab7997b0d8fc44a069dc5def99827ebeb2db6351f08",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "9d6742706d7c4b05515f6ffcb74bcbd84e393828b4d539720b50a0a77c8a88ec",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "9d9eaa20c14d8161f816d1a48432445f5aac49aa06f475ceba3e0c420b53cbaf",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "9dd0444f7eb73cb2950a8f388a3fe5684c75631d2d5c5ec35cadf635418082c0",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "9ee08cdae42aec5034beb877f0867d4961666afbe1bf0c7a8bde21e225c8ad92",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "9f097e56167ba5bb1b1eec54ce8640137b78e6a1acab6a6a0348399c689afc55",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "9f1cdac97055cf35840ae6ca1a7f5378a3a346b897f25a94bd77849af8a6cfe0",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "a0054c40a0914bdc1beee5e75602907d204b9d91417b2f13765394e2b8fc694b",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "a2f6392545a86e2013aaffdedb072466a5aeb5864ed6bd42d4e8d0a2a8717456",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "a42e01070f3ec6a7839d3a78293826216b08fccb7b2bac6222b002795762f6e5",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "a43f526bb1759744c619a6b5effe570e19ee078d0e4ed1fb2d7af700ff7142ce",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "a4d3a1d3f67b618d93b8e664023deefb5608729e29fbfb59b3c848b39fabe710",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "a4e0682c464d1c399bca546a8d0092c2a2ea02746e227bf6c470ae63d75a5ac9",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "a50905c1e8501b092e8edabd40cda78698df50734c5ef7c5008aa5e3240aca8c",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "a54a09307eec3fd9470a14865b48ad9fe61c1691743b371cd2f64124807bcda2",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "a54e35ccbb09c62f46f81c8cab20503f2e0f927a5935769c444e504999ab56b1",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "a76d44b1aab454bdf5c668cf716faaaabaebd981e73be8495a39e29f8b1be93f",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "a78bfa365dccec02a4f5e7f83a46c9d599b98fffbdba71cf0b2258b8b7a93efc",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "a8ac4de40fe87bb76d8a4f670ec572fb7e45b4c0a326c5282fad46f66dd06bcd",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "a9effc7b461fe195140224354a45294a99dffab6dfad6309b13526fea8bb68f0",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "aa2f276b67c1eea25450dcbde0645734216296c513274694880e0e7b1bb42d9c",
+	"c2s": [
+		"http://feed43.com/0783636110362654.xml",
+		"https://raw.githubusercontent.com/fangflee/testme/master/xml.xml",
+		"http://www.webrss.com/createfeed.php?feedid=49931",
+		"https://motorcar2017.wordpress.com"
+	]
+}
+{
+	"sha256": "aa37d38a839fbf7a819ebd51a37f0694e55a6c3d2adc7c7494e58b1db4a04af4",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "aaae5a5397ef09a9b4abf1ab18deffe327772baf942328218b05304092ad25a3",
+	"c2s": [
+		"https://raw.githubusercontent.com/lctst/testlct/master/xml.xml",
+		"http://feed43.com/3210021137734622.xml",
+		"http://feeds.rapidfeeds.com/88604/"
+	]
+}
+{
+	"sha256": "ab608d1adb169040b6fad2029ae56c07fa8d45ee9e03f4b9dfebce2b7d92b1d4",
+	"c2s": [
+		"http://feed43.com/0783636110362654.xml",
+		"https://raw.githubusercontent.com/fangflee/testme/master/xml.xml",
+		"http://www.webrss.com/createfeed.php?feedid=49931",
+		"https://motorcar2017.wordpress.com"
+	]
+}
+{
+	"sha256": "ab63c89202495ce0f20966ff948cfa92afdf7837babc30814a663eb22eac8bab",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "ab70ef16e625291df6dc33903ec23dbc7b505c25e2e894bfbfd0110550d7664e",
+	"c2s": [
+		"http://feed43.com/1784602644478028.xml",
+		"https://raw.githubusercontent.com/noorhasima/likingd/master/xml.xml",
+		"http://www.webrss.com/createfeed.php?feedid=49940",
+		"https://dreamsdreamssite.wordpress.com/2017/10/10/dreams/"
+	]
+}
+{
+	"sha256": "acbbeace0666e1a5a6f445c976521c54e26d5e53a5bb66ed7370e7a1315bf1f9",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "ad70bd99e818b768558a44474166dc2b3700eeb942c7cd0f6a327d082a4ca863",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "adb6d7d7c95af2ad44b934afd2b7f3847fbe56683571bd5ed439436fde60d6dc",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "aea78185a3171e4e47526e23d80d6743d85fa21669b805b3c54e85ac69955ee0",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "aee22de19039aa5e476b756cd8819ed05a82b7cef17c5cc84fdb271dbc4b24d0",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "aff048af8441f980df2461e7656d733493a57377fbe1f236ca68cd6298c95c38",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "b17fb194dc55e9eb77f71bd8cf37659dbca0b0b45ee4ca1019799165e52eec13",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "b19bb87a15875c18b0e50c264e0228b2bdc7023cd6c5eeefa9a34d4046ee915a",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "b1fff79febe268ddde1e32b00bc406d98849557f259470791a6fe777f2a364b6",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "b2d46fc81319fd5bba7f20a600e042837f9910a2001e2ca3b4809d23f3948b8f",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "b35d1d69ac172ff228cadc46ea0403e222397215fe1923764c6929031ba1946d",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "b3f86905d9f4087ed752ac574ad261d2fb0f2b86d57c8220dd28f1ad6cf7c36a",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "b69c0713eee5eab42d73f361f4e346480170b00924a71e8862b53d7fbd16cb00",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "b6bda2fc2710ac5b5ba6408c909d9f26de497d62f87bb16aac6e806e955cd549",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "b7197088ae60b9870660d2e7aea9e02f52a9ddc9bc35214f2d4861b7351aeedf",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "b78a53902e06fc7b0ccf12c7fa5dde1bc3b51deb6b16338901f12d9334cc8a9d",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "b7b3088e445b7aa839a80002257ad14ad38a1494f5ca99e0baaac814678b9b32",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "b967aafff6051054dcd5b5d24fb6629f440f9660e0bdee66d49b8ae53643fe50",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "b97c577b10c51d3466bbc8150df5f75a7d668285315984da97b53282c2975c16",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "b9e30315d4c4f3211595bd290db270075ece88acc87bad67302cb1902ed6fa82",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "bbb79e1b9b889070c1f99d10474ccde3abfefa8de62ed26d573523c4d266a7e2",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "bc68db20421981974417debf51ddee722fcc424038f45117d38945d059f2bc74",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "bc9f93e0797729d811e2a1e81964f63f6b156268120e35adaa26e2ee0b3265e7",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "be6eda52455f9c442d359af932bea30a1be91d2ae3d9ade79b89e991fa037086",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "bebdbecb71435470776a038d63d6e053c42c1c0d89166e8ca59117b6c9480f3f",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "bf93ca5f497fc7f38533d37fd4c083523ececc34aa2d3660d81014c0d9091ae3",
+	"c2s": [
+		"http://feed43.com/5787707581531238.xml",
+		"http://www.webrss.com/createfeed.php?feedid=49297",
+		"https://robins0n12.wordpress.com/2017/01/31/my-biography/",
+		"https://raw.githubusercontent.com/devonkearns/cricket/master/xml.xml",
+		"maxx.crabdance.com",
+		"mu5.ignorelist.com"
+	]
+}
+{
+	"sha256": "c02e6032aa26398653ddf0b4570617342ff337547daac526359528c99e3391f2",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "c03e5aaaba8dddcc0dc961b501d849405f31452f361176d7df1216eb85fb2608",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "c03f1f181fd74fbe22c64c7a6aba903d8a712ce7801d71bb0ceaffcf7c951d53",
+	"c2s": [
+		"http://overthemontains.weebly.com/trekking-lovers",
+		"https://travelhoneymoon.wordpress.com/",
+		"http://successtofitness.webs.com/apps/blog/",
+		"https://raw.githubusercontent.com/Zunaid-zunaid1/Joncorbat/master/xml.xml",
+		"https://gitlab.com/Zunaid-zunaid1/tools/raw/master/xml.xml",
+		"https://bitbucket.org/Zunaid-zunaid1/test/raw/a74ad383a4a9a82aa1aa4762fc9146cd840b5392/xml.xml"
+	]
+}
+{
+	"sha256": "c08f594424ba7c4ed21773a9ab6b02cfcb9871bb489da7d5b207bf7c4f84e9bc",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "c2fc6aa4b0c93f30975e35b1fe8e19883582ab6b703c27728ee6856e9027b3ca",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "c3c6b73bec2830a643744dfd9cd8d7d49dc99a12622a5f92ba07fb1f0ac87a8d",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "c423ebc3fa83d09aaca080232070ba0df9df16f8f1821db9600b3e853204d61a",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "c4a698c43c2718873e06a5cfddd17099723a81ad59663a11007f1dc1ffb186ed",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "c4d7a4cb3d36889a63122fdce791fed1d52facad8e6c843e0ff14509ab80bd9a",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "c52c6fa2eb5e18d1bf74a22200f93a4b9df1eb5bcae43d456c018a1917610ee5",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "c6dc74df6eaa4ddbb442c666541ada7c57327e9f9c4a645158da4efba5446f07",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "c7357fd65da682e8124f58eae5a881438bc1d6490115b1594d4c6d417de0e1e9",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "c74cc7f8a1c3dd02426efb4cab8a0f648f76f5b12a63cdda83f77b7f607ea19b",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "c7c49b21d1ec7b289a05d710959ca06e068f023f1517a0916cd102bd50943156",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "c9345a417e1ac0de9fb612be85dd3ee0d800de067bddf4b26c5d156e8e0454e4",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "ca2c1ca097e4b4ca2df0213d3b82a1899aa477c69d6c87138f90a2aa6b7e15f1",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "ccbf93ea47edcc8a95444e2299762df3b420f27414a40a1794268261d467c280",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "cd677242197cdc89d7b8e2e3056030fe2bb9b384c95a7a027a7eee8182b8426f",
+	"c2s": [
+		"http://whgt.steelhome.cn/xml.xml",
+		"http://forum.china.org.cn/viewthread.php?tid=175850&page=1&extra",
+		"http://wgeastchina.steelhome.cn/xml.xml",
+		"http://wxycgc.steelhome.cn/xml.xml",
+		"http://blog.chinadaily.com.cn/home.php?mod=space&uid=2392255&do=blog&id=35101#quickcommentform_35101",
+		"http://www.itpub.net/thread-2055123-1-1.html",
+		"http://wxkysteel.steelhome.cn/xml.xml"
+	]
+}
+{
+	"sha256": "cdf3d5df951ee2f61782add3980fedd60996f0845a7ad1ac0e6e71481d9c0e63",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "cf1cc9e3dbdccc6a50fe3c943ecb05af837e99e8c43d2a6e7a7a9d7c9fc0fa94",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "cf55f3399f0d2003310a18da65019ba5f5b2e2231c195f04511a88daa0b6d09f",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "cfc40f145ac8189a0ac64500987a45cda117b99d6291c2683c40eb2fcba43a86",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "d0375b74738d2ce4cd90d88254072b7bdafe615693c62aafbddd997d70f7b345",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "d06f10f2d27aef1ea5a5de9f26bddb5be358ae272a8eb0e93ffc0af570d7b9ad",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "d0d0d4bd69a6b0122724bfa579a8933edba74e017d0d75acf08145d8f7a766c7",
+	"c2s": [
+		"https://raw.githubusercontent.com/lctst/testlct/master/xml.xml",
+		"http://feed43.com/3210021137734622.xml",
+		"http://feeds.rapidfeeds.com/88604/"
+	]
+}
+{
+	"sha256": "d11246231e8daa1b2d1e5e3d087429124bfee334e69400c78ad4c5fc817e5c10",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "d1efeff98bdb187f434c1d611bf0d92733a0ec9a8fdf2f1adad192f9e50e2913",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "d2b1ae0c3d6d56b15cbed33f21408578b2e358e7298ce00e94877abfa834a6b5",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "d2d5df314e34dfc4f3c1c11bfe329c4fcfe1b29b3a9a660e3b2adad1ad53c973",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "d3b0d1abc5be23635f5c79543ebd6d2b943d212e92400a6b6b76acac78d931f6",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "d46737964ea5ba31f8c1083ea80df42055e9a34a08f612ae44d565cceb8beaf4",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "d46b4a13744c6e66a181ce45c3d5f80f9a5d5cfd2384c2e880ab78aa11a54644",
+	"c2s": [
+		"https://raw.githubusercontent.com/lctst/testlct/master/xml.xml",
+		"http://feed43.com/3210021137734622.xml",
+		"http://feeds.rapidfeeds.com/88604/"
+	]
+}
+{
+	"sha256": "d4b7778214460af1eee6131099c79c332948ea32c5501e5692d50d84a59099b1",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "d52e61bef2bbdc844e16b84d5fdbb83859b445a9f3de154b6b0233e67ab40b2b",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "d673eb917f1d3e5ee74423c6ef3667d01036401167fff740a8617d1e8ea40ce8",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "d6d7ef8ee457d7106a02edc4ccc216529bb4868111473b89162ab5f9013b1f2e",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "d73ef3987bdc91d119c6941656945aed70ac6c94c3fa35253be46605cdf7c205",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "d74ae8bc6a65d9cc38789685496eb961f2919164ef59ed7b0bc282d27d4f6d8c",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "d915a0350c2e3b5285f892e86c755e9cfdf42df7df84e12d004e7bb041125280",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "d93c300e27fb0da6ceb6d36cd1b8bebeb0ea1eeba410b0a83e0258a34a0430a5",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "dab36043fbd72d2e72d8dbfd8cf0f9b81de63e571d9189cebd7d828628a291db",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "dba2a0d187486df82516c0d056fa62e0eab3fa70dbfc11195d462b71e61da4b7",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "dc2ed232388b96e46e99a5673497a651e1addbc40924abe2f374203a71c9fee4",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "dcaaafd78e78676334de1526189db07aec1eb8b2291a3b39220f18235d80b32e",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "dcc895db9aad8ed856f90a73c0cd804b2b2d29ec202f3a732535a4e3a1c9c2f6",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "dee0b37bbfade1bf320e24d169d7f1b0bf57858b5fbfc239af3f5e8836bbe6a7",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "df289ca81735aa520a016bae53495a117abe76123768e11dc908809a4cb83c93",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "dfc71811e7f8b789f9d34c187f81ee2575e2538b1d24a820bf9905d6bba50e61",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "dfdffa20e0dc1d9cb4504aa0e214e03f302af3f334839fb5fdc473e5fcface4d",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "dfe0e2cad843ee66f7bad85e62accb76ae54993eb057041e6f81315a3c99d522",
+	"c2s": [
+		"http://www.webrss.com/createfeed.php?feedid=49312",
+		"http://feed43.com/3633203283037025.xml",
+		"https://asdf478.wordpress.com/2017/02/13/hi-everyone/",
+		"https://raw.githubusercontent.com/devonkearns/ytrgfvr/master/xml.xml",
+		"ch0ice.crabdance.com",
+		"ch00se.chickenkiller.com"
+	]
+}
+{
+	"sha256": "e007064752c18d7e46f01e82d36f72cea58fcab5974680269786cefb67c91eaf",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "e0835c47fc23bf3702922e03bcbf5a17e1ba08853eebb0d2c7222d46823d3fb9",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "e0a482708482ebc1ba390b04756be60325583c8fa33e35b9b52a3f60556dc6e8",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "e0a53bf0121bc5a5415aa3b4d78c1f7961b9c675f61c9d0c52721926d568ad4b",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "e0d32df8cc527f8a183550456e3ec5bac6d4aa86576605bb1b770648b1c101b5",
+	"c2s": [
+		"http://whgt.steelhome.cn/xml.xml",
+		"http://forum.china.org.cn/viewthread.php?tid=175850&page=1&extra",
+		"http://wgeastchina.steelhome.cn/xml.xml",
+		"http://wxycgc.steelhome.cn/xml.xml",
+		"http://blog.chinadaily.com.cn/home.php?mod=space&uid=2392255&do=blog&id=35101#quickcommentform_35101",
+		"http://www.itpub.net/thread-2055123-1-1.html",
+		"http://wxkysteel.steelhome.cn/xml.xml"
+	]
+}
+{
+	"sha256": "e1df596ce4f319a17a6bdfa32d3c70ee58e0783b42027ff2013d679e72f876b2",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "e2335a88221b27948ad229cc3f9f28c157758abcc31c517ebf05bd69da6cad08",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "e35439128eea352a0e60f1b4b62feb6426a70ce6f390ca7138ab7dfb83630182",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "e46b24088fc76ba18bdc914bff93e63ce56d41b20ff4875f2a465201ae69cbf6",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "e4a84c5b02e8a237d8eabe64b8725f3914696d4f08887b6f2fd2daad33867d13",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "e554e96495957d248479de2519bd215283c3d1afb758bdb20b8507bccc887605",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "e57d5e84b0b26d73ad967b16d73931bae3453fc7949fb02ab595a4c3163936a3",
+	"c2s": [
+		"http://www.webrss.com/createfeed.php?feedid=49312",
+		"http://feed43.com/3633203283037025.xml",
+		"https://asdf478.wordpress.com/2017/02/13/hi-everyone/",
+		"https://raw.githubusercontent.com/devonkearns/ytrgfvr/master/xml.xml",
+		"ch0ice.crabdance.com",
+		"ch00se.chickenkiller.com"
+	]
+}
+{
+	"sha256": "e65c10587430fd85e57766b1aad782ce1e15bfb363f6009198d88fc5eb54d27a",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "e67037986ce8c4cfbae03bc66d084bffa050f40b20666f0294eff79465e709cb",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "e840b59ed3669c027d05b9cc858fce01d32d9f5bd4ad612953f65a4305cda95e",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "e95d697cefbb681b6e786d2de1909b4619f772974c12e41b7047467894954d1e",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "ea39b9f6c92772b1acea07b0aea0c6d2422846c95fc0680d3131c38479db84c5",
+	"c2s": [
+		"https://node2.feed43.com/0056234178515131.xml",
+		"https://raw.githubusercontent.com/petersonmike/test/master/xml.xml"
+	]
+}
+{
+	"sha256": "ea912075c340f46b8624e2a015e5063e549b001c4ddd21cd759218d6bc9232bc",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "eabf5c90416756b39a1549176ea95cb11568456c6f94b94fceddeb973bb5b062",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "eafaef822869fff499999e77b1928c0b77afb61d3d2dfb12a5a8d903545e4c09",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "ec7f3dcdb7812f77e8acf0720bc202c1b0412400a44f7718dec0c13554f13a2a",
+	"c2s": [
+		"http://www.webrss.com/createfeed.php?feedid=48771",
+		"http://feed43.com/0236014816401653.xml",
+		"https://raw.githubusercontent.com/Vldir/readme/master/xml.xml",
+		"https://muzik79.wordpress.com/2016/10/10/muzik-shakes-y0u/",
+		"ab0bz.chickenkiller.com",
+		"ab0b0z.crabdance.com",
+		"ab0bz1.jumpingcrab.com"
+	]
+}
+{
+	"sha256": "ed4e350d121e08d5e3df617575e883f7a79daa48750054d11e12bbadd2299c44",
+	"c2s": [
+		"https://node2.feed43.com/0056234178515131.xml",
+		"https://raw.githubusercontent.com/petersonmike/test/master/xml.xml"
+	]
+}
+{
+	"sha256": "ed76ec3e31484891ed59ca09b6ee7b4745392905db9e802843ccaa96849d1611",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "ee2ae0fa733e0671ba06e2bde3d6ce4b39f1c993d333ff45b8aa3265854e27d4",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "ee6c2954fcdcac547e6865bb3d5a962bb8245ed17e9e7d577ba61d7b012fbf03",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "ef40abfec9c4be9e9fc79cdf79084f10aa4e0fdb639cd26d7a18fb74eaf916d1",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "f145d875e52f0034ef580241b621556ed2a0b88b25afd1bad12c8144084d11b7",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "f3a7f3556e83f4cc36777a9f96ba9cc7be708e7b56da8330e6d3aeb4bee44f95",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "f47e063bafeb9968eac3cf1011dff8a61eabd2b08a14092393b16f2fabfd3f9c",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "f49406770cf888b3ac3d715382547e4f26fbfe4c4c4f9e73e6b7d01d8a1fa8a2",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "f5006e1fe9a7f078667f75eb1af3f83dd52c9739fe7e871a05519bde0ad3ac16",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "f570261246a5a501b12b5152ce8b3033497eb6afe9285010e662a8b1afff1ed6",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "f58d06a49f93acbd524ae5f1ba20be190531819704d5f7d67c245619a98a76e9",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "f5c0d0995aea59b7958ce7bdb3c32ae41ef5fb5fe6f49c779e334bd69f8ba7e5",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "f652c477f669dcf38b67e0f939d9ee6e26d9841fb7e9f93742197e78e97d4359",
+	"c2s": [
+		"http://hostmyrss.com/feed/gfew_wergre",
+		"siriusblack02.servepics.com",
+		"siriusblack01.serveblog.net",
+		"siriusblack05.servegame.com",
+		"siriusblack04.servemp3.com"
+	]
+}
+{
+	"sha256": "f7c085cbfff12eff73a0115e46c777913970d7e80492a9caf3404b77459caf4b",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "f818dc34d1d1fd0370922d962ffe35d1ecdb05f39732c7442df2da1ae650770c",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "f862c0b7efc4c602e73bff42062d49d22b5370cd2a7622bbc5276901f1207387",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "f8a999eb9fe4c0ac61433b89cd12e56f8153b046f0893878198a93088eb930ab",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "f8bea31682c80bf446f21b86f4d8f54bb6195379202f113c0ef536af199f14e4",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "fa3053cb46f1c2199b435793a876a9c764a330a133aafa6fc6cd7c920e3a66fd",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "fa59ac710ff2552a226611aa2459fdbfe633df9464273399792856da654faa72",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "fc0dc6e7c82f3d957e5032ac0f891cd0b78a2306a0c176582e9d436a8f7ca14e",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "fcaf12a91dfcf034ab19c1c731880ae858331f4a67f7d3a030e6da8ca39943f7",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "fd245bf44d528ba9b856cb28b2fba33daee20bcf294f5024b266491e85c76f94",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "fd82eea913fce2f473dd636a161ab1aa685e6f1b3386f6fa20ab80fe99af5ad4",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "fdb9eefa17ded54f40c9b82e8e1ef2d12d1b722e61fb3f8c127bb904544ca5f9",
+	"error": "not a Badnews sample"
+}
+{
+	"sha256": "ff0e723333cfa7e834e3d1e593b0977f31b890eaf6cdd5797295fe485cab8f92",
+	"error": "not a Badnews sample"
+}

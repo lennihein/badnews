@@ -37,3 +37,20 @@ class FileInfo:
 
     def to_list(self) -> list:
         return [self.sha256, self.dll, self.GUI, self.arch, self.size, self.stripped]
+
+    def to_json(self) -> str:
+        string = ""
+        string += "{\n"
+        string += '\t"sha256": "' + self.sha256 + '",\n'
+        if self.prediction:
+            if len(self.encrypted_urls)>0:
+                string += '\t"c2s": [\n'
+                for i, c2 in enumerate(self.encrypted_urls):
+                    string += '\t\t"' + c2 + '"' + ("," if i+1 < len(self.encrypted_urls) else "")  + '\n'
+                string += '\t]\n'
+            else:
+                string += '\t"c2s": [],\n'
+        else:
+            string += '\t"error": "not a Badnews sample"\n'
+        string += "}\n"
+        return string
