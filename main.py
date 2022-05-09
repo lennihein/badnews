@@ -2,7 +2,7 @@
 
 import sys, os
 from src.pretty_print import file_table, BOLD, WARNING, ENDC, GREEN, YELLOW, RED, BLUE
-from src.tools import file, batch
+from src.tools import file, batch, get_strings
 from src.predictor import Predictor
 
 
@@ -93,6 +93,14 @@ if __name__ == "__main__":
         print(f"\n{BOLD}The following samples have been manually labeled:{ENDC}")
         print(file_table(labeled), end="")
         print(f"{GREEN}True Positive{ENDC}, {BLUE}True Negative{ENDC}, {RED}False Positive{ENDC}, {YELLOW}False Negative{ENDC}\n")
+    else:
+        print(file_table(rets), end="")
+        print(f"{GREEN}True Positive{ENDC}, {BLUE}True Negative{ENDC}, {RED}False Positive{ENDC}, {YELLOW}False Negative{ENDC}\n")
+        if len(rets[0].encrypted_urls) > 0:
+            print(f"{BOLD}Encrypted URLs:{ENDC}")
+            for url in rets[0].encrypted_urls:
+                print(f"> {url}")
+            print()
 
     # print falsely predicted files
     if len(falses) > 0:
@@ -115,7 +123,7 @@ if __name__ == "__main__":
     #     print(file_table([rand], sha265_len=64))
     #     if len(rand.urls) > 0:
     #         print(f"{BOLD}Unencrypted URLs:{ENDC}")
-    #         for i in rand.urls:
+    #         for i in rand.urls:   
     #             print(f"> {i}")
     #         print()
     #     if len(rand.encrypted_urls) > 0:
@@ -130,3 +138,16 @@ if __name__ == "__main__":
         for i in rets:
             f.write(i.to_json())
         f.close()
+
+    # find strings that are unique to badnews
+    if is_dir:
+        badnews_strings = get_strings(true_pos[0].path)
+        for i in true_pos:
+            new_strings = get_strings(i.path)
+            badnews_strings = filter(lambda x: x in new_strings, badnews_strings)
+        for i in true_neg:
+            new_strings = get_strings(i.path)
+            badnews_strings = filter(lambda x: x not in new_strings, badnews_strings)
+        print("\nHere are the strings that are unique to badnews:")
+        for i in badnews_strings:
+            print(f"> {i}")

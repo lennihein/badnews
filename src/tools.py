@@ -104,3 +104,7 @@ def batch(fn, path):
     for file in sorted(os.listdir(path)):
         returns.append(fn(path + file))
     return returns
+
+def get_strings(file_path: str) -> list:
+    proc = sp.Popen(["strings", file_path], stdout=sp.PIPE)
+    return list(map(lambda x: x.decode().strip(), proc.stdout.read().split()))
