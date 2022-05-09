@@ -31,6 +31,7 @@ class FileInfo:
     prediction: bool = None
     urls: list = None
     encrypted_urls: list = None
+    lstrcpya: bool = None
 
     def __str__(self) -> str:
         return file_table([self])

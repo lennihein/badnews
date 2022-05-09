@@ -30,6 +30,8 @@ if __name__ == "__main__":
     for i in rets:
         strings_predict = Predictor.strings_predict(i)
         capstone_pred = Predictor.capstone(i)
+        if capstone_pred:
+            i.lstrcpya = capstone_pred
         i.prediction = capstone_pred and strings_predict
 
         # check urls of predictions
@@ -110,6 +112,7 @@ if __name__ == "__main__":
     # print stats regarding accuracy and predictions
     if len(trues) + len(falses) > 0:
         accuracy = len(trues)/(len(trues)+len(falses))
+        print("────────────────────────────────────────────────")
         print(f"{BOLD}Accuracy on labeled samples: {accuracy*100:2.0f}% ({len(trues)}/{len(trues)+len(falses)}){ENDC}")
         print(f"{BOLD}Overall Predicted {len(positives)} positives and {len(negatives)} negatives{ENDC}")
 
@@ -139,15 +142,15 @@ if __name__ == "__main__":
             f.write(i.to_json())
         f.close()
 
-    # find strings that are unique to badnews
-    if is_dir:
-        badnews_strings = get_strings(true_pos[0].path)
-        for i in true_pos:
-            new_strings = get_strings(i.path)
-            badnews_strings = filter(lambda x: x in new_strings, badnews_strings)
-        for i in true_neg:
-            new_strings = get_strings(i.path)
-            badnews_strings = filter(lambda x: x not in new_strings, badnews_strings)
-        print("\nHere are the strings that are unique to badnews:")
-        for i in badnews_strings:
-            print(f"> {i}")
+    # # find strings that are unique to badnews
+    # if is_dir:
+    #     badnews_strings = get_strings(true_pos[0].path)
+    #     for i in true_pos:
+    #         new_strings = get_strings(i.path)
+    #         badnews_strings = filter(lambda x: x in new_strings, badnews_strings)
+    #     for i in true_neg:
+    #         new_strings = get_strings(i.path)
+    #         badnews_strings = filter(lambda x: x not in new_strings, badnews_strings)
+    #     print("\nHere are the strings that are unique to badnews:")
+    #     for i in badnews_strings:
+    #         print(f"> {i}")
