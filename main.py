@@ -154,3 +154,13 @@ if __name__ == "__main__":
     #     print("\nHere are the strings that are unique to badnews:")
     #     for i in badnews_strings:
     #         print(f"> {i}")
+
+    # # print labeled samples:
+    # if is_dir:
+    #     print("")
+    #     print(f"{BOLD}Known Badnews Samples:{ENDC}")
+    #     for i in true_pos:
+    #         print(f"> {i.sha256}")
+    #     print(f"{BOLD}Known Goodnews Samples:{ENDC}")
+    #     for i in true_neg:
+    #         print(f"> {i.sha256}")
