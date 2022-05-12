@@ -11,6 +11,7 @@ The program can either analyse a single sample or given a folder containing mult
 - Python 3.10
 - Python-PEFile (+Capstone)
 - Python-Alive-Progress
+- Retdec-Decompiler
 
 ## Analysis of sample set
 
@@ -18,7 +19,7 @@ The program can either analyse a single sample or given a folder containing mult
 → ./main
  [*] Fetched Domain Suffixes
  [*] Checking files in samples/
-[========================================] 393/393 [100%] in 1.7s (235.30/s) 
+[========================================] 633/633 [100%] in 1.7s (365.89/s) 
  [*] Fetched 393 binaries.
  [*] Analysing binaries...
 ╭──────────┬────────┬────────┬─────┬─────┬──────────╮
@@ -26,13 +27,6 @@ The program can either analyse a single sample or given a folder containing mult
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ 0b849e5b │ 173KiB │ 32-bit │     │     │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://en.wikipedia.org
-> http://crl.certum.pl/ca.crl0h
-> https://www.certum.pl/CPS0
-> http://crl.certum.pl/l3.crl0a
-> https://www.certum.pl/repository.0
-
 Encrypted URLs:
 > https://feed43.com/8608036282271182.xml
 > https://raw.githubusercontent.com/rizvirehman/rh0m/master/xml.xml
@@ -107,13 +101,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ 290ac98d │ 132KiB │ 32-bit │     │     │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://en.wikipedia.org
-> http://crl.certum.pl/ca.crl0h
-> https://www.certum.pl/CPS0
-> http://crl.certum.pl/l3.crl0a
-> https://www.certum.pl/repository.0
-
 Encrypted URLs:
 > http://feed43.com/3210021137734622.xml
 > http://feeds.rapidfeeds.com/88604/
@@ -124,15 +111,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ 306a350f │ 141KiB │ 32-bit │     │ yes │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://www.verisign.com/rpa
-> https://www.verisign.com/rpa0
-> https://www.verisign.com/rpa
-> https://www.verisign.com/cps0*
-> https://www.verisign.com/rpa04
-> https://www.verisign.com/rpa
-> http://java.com/0
-
 Encrypted URLs:
 > http://feed43.com/2640775070507127.xml
 > http://www.webrss.com/createfeed.php?feedid=49891
@@ -155,9 +133,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ 37be21f4 │ 100KiB │ 32-bit │     │ yes │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://secure.comodo.net/CPS0C
-
 Encrypted URLs:
 > http://hostmyrss.com/feed/gam3s
 > tomberenger01.servehttp.com
@@ -180,15 +155,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ 47e0886b │ 141KiB │ 32-bit │     │ yes │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://www.verisign.com/rpa
-> https://www.verisign.com/rpa0
-> https://www.verisign.com/rpa
-> https://www.verisign.com/cps0*
-> https://www.verisign.com/rpa04
-> https://www.verisign.com/rpa
-> http://java.com/0
-
 Encrypted URLs:
 > http://feed43.com/1462256483876401.xml
 > http://tourntrave.weebly.com
@@ -200,9 +166,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ 49d08ff0 │  99KiB │ 32-bit │     │ yes │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://en.wikipedia.org
-
 Encrypted URLs:
 > captain.chickenkiller.com
 > http://feeds.rapidfeeds.com/81908/
@@ -220,9 +183,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ 4ec1856b │ 190KiB │ 32-bit │     │     │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://en.wikipedia.org
-
 Encrypted URLs:
 > https://node2.feed43.com/0056234178515131.xml
 > https://raw.githubusercontent.com/petersonmike/test/master/xml.xml
@@ -232,15 +192,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ 5044e35e │ 143KiB │ 32-bit │     │ yes │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://www.verisign.com/rpa
-> https://www.verisign.com/rpa0
-> https://www.verisign.com/rpa
-> https://www.verisign.com/cps0*
-> https://www.verisign.com/rpa04
-> https://www.verisign.com/rpa
-> http://java.com/0
-
 Encrypted URLs:
 > d0nald.strangled.net
 > d0nald1.strangled.net
@@ -267,9 +218,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ 5b7fdc32 │  94KiB │ 32-bit │     │ yes │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://en.wikipedia.org
-
 Encrypted URLs:
 > http://blog.chinadaily.com.cn/home.php?mod=space&uid=2392255&do=blog&id=35101#quickcommentform_35101
 > http://forum.china.org.cn/viewthread.php?tid=175850&page=1&extra
@@ -284,15 +232,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ 5c0b1e82 │ 141KiB │ 32-bit │ yes │ yes │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://www.verisign.com/rpa
-> https://www.verisign.com/rpa0
-> https://www.verisign.com/rpa
-> https://www.verisign.com/cps0*
-> https://www.verisign.com/rpa04
-> https://www.verisign.com/rpa
-> http://java.com/0
-
 Encrypted URLs:
 > http://feed43.com/7855632650435114.xml
 > http://www.webrss.com/createfeed.php?feedid=49922
@@ -316,15 +255,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ 647b7a61 │ 141KiB │ 32-bit │ yes │ yes │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://www.verisign.com/rpa
-> https://www.verisign.com/rpa0
-> https://www.verisign.com/rpa
-> https://www.verisign.com/cps0*
-> https://www.verisign.com/rpa04
-> https://www.verisign.com/rpa
-> http://java.com/0
-
 Encrypted URLs:
 > http://feed43.com/5170483112026631.xml
 > http://www.webrss.com/createfeed.php?feedid=49942
@@ -336,9 +266,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ 6f237108 │ 172KiB │ 32-bit │     │     │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://en.wikipedia.org
-
 Encrypted URLs:
 > https://feed43.com/8711803854873534.xml
 > https://raw.githubusercontent.com/alexboycott/metest/master/xml.xml
@@ -401,15 +328,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ aa2f276b │ 141KiB │ 32-bit │ yes │ yes │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://www.verisign.com/rpa
-> https://www.verisign.com/rpa0
-> https://www.verisign.com/rpa
-> https://www.verisign.com/cps0*
-> https://www.verisign.com/rpa04
-> https://www.verisign.com/rpa
-> http://java.com/0
-
 Encrypted URLs:
 > http://feed43.com/0783636110362654.xml
 > http://www.webrss.com/createfeed.php?feedid=49931
@@ -421,9 +339,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ aaae5a53 │ 160KiB │ 32-bit │     │     │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://en.wikipedia.org
-
 Encrypted URLs:
 > http://feed43.com/3210021137734622.xml
 > http://feeds.rapidfeeds.com/88604/
@@ -445,15 +360,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ ab70ef16 │ 137KiB │ 32-bit │     │     │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://www.verisign.com/rpa
-> https://www.verisign.com/rpa0
-> https://www.verisign.com/rpa
-> https://www.verisign.com/cps0*
-> https://www.verisign.com/rpa04
-> https://www.verisign.com/rpa
-> http://java.com/0
-
 Encrypted URLs:
 > http://feed43.com/1784602644478028.xml
 > http://www.webrss.com/createfeed.php?feedid=49940
@@ -478,9 +384,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ c03f1f18 │  88KiB │ 32-bit │     │ yes │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://en.wikipedia.org
-
 Encrypted URLs:
 > http://overthemontains.weebly.com/trekking-lovers
 > http://successtofitness.webs.com/apps/blog/
@@ -494,9 +397,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ cd677242 │  88KiB │ 32-bit │     │ yes │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://en.wikipedia.org
-
 Encrypted URLs:
 > http://blog.chinadaily.com.cn/home.php?mod=space&uid=2392255&do=blog&id=35101#quickcommentform_35101
 > http://forum.china.org.cn/viewthread.php?tid=175850&page=1&extra
@@ -511,13 +411,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ d0d0d4bd │ 132KiB │ 32-bit │     │     │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://en.wikipedia.org
-> http://crl.certum.pl/ca.crl0h
-> https://www.certum.pl/CPS0
-> http://crl.certum.pl/l3.crl0a
-> https://www.certum.pl/repository.0
-
 Encrypted URLs:
 > http://feed43.com/3210021137734622.xml
 > http://feeds.rapidfeeds.com/88604/
@@ -528,13 +421,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ d46b4a13 │ 133KiB │ 32-bit │     │     │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://en.wikipedia.org
-> http://crl.certum.pl/ca.crl0h
-> https://www.certum.pl/CPS0
-> http://crl.certum.pl/l3.crl0a
-> https://www.certum.pl/repository.0
-
 Encrypted URLs:
 > http://feed43.com/3210021137734622.xml
 > http://feeds.rapidfeeds.com/88604/
@@ -558,9 +444,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ e0d32df8 │  94KiB │ 32-bit │     │ yes │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://en.wikipedia.org
-
 Encrypted URLs:
 > http://blog.chinadaily.com.cn/home.php?mod=space&uid=2392255&do=blog&id=35101#quickcommentform_35101
 > http://forum.china.org.cn/viewthread.php?tid=175850&page=1&extra
@@ -588,9 +471,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ ea39b9f6 │ 190KiB │ 32-bit │     │     │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://en.wikipedia.org
-
 Encrypted URLs:
 > https://node2.feed43.com/0056234178515131.xml
 > https://raw.githubusercontent.com/petersonmike/test/master/xml.xml
@@ -614,9 +494,6 @@ Encrypted URLs:
 ├──────────┼────────┼────────┼─────┼─────┼──────────┤
 │ ed4e350d │ 190KiB │ 32-bit │     │     │ imported │
 ╰──────────┴────────┴────────┴─────┴─────┴──────────╯
-Unencrypted URLs:
-> https://en.wikipedia.org
-
 Encrypted URLs:
 > https://node2.feed43.com/0056234178515131.xml
 > https://raw.githubusercontent.com/petersonmike/test/master/xml.xml
@@ -633,7 +510,7 @@ Encrypted URLs:
 > siriusblack04.servemp3.com
 > siriusblack05.servegame.com
 
-[========================================] 393/393 [100%] in 22.6s (17.38/s) 
+[========================================] 393/393 [100%] in 14.4s (27.24/s) 
 
 The following samples have been manually labeled:
 ╭──────────┬────────┬────────┬─────┬─────┬──────────╮

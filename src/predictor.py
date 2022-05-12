@@ -77,13 +77,13 @@ class Predictor():
             # TODO: check if lstrcpyA calls are grouped and at the start of the respective function
 
             urls = []
-            for i in sorted(lstr_lines):
+            for i in lstr_lines:
                 line = lines[i]
                 url = rot(line.split('"')[1]).strip()
                 if validate_url(url):
                     urls.append(url)
 
-            file.encrypted_urls = urls
+            file.encrypted_urls = sorted(urls)
 
             if len(urls) > 0:
                 file.prediction = True

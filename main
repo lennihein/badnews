@@ -43,15 +43,15 @@ if __name__ == "__main__":
         # lstrcpyA prediction
         lstrcpyA_pred = Predictor.lstrcpyA(i)
 
-        # strings prediction
-        i = strings(i)
-        strings_predict = Predictor.strings_predict(i)
+        # # strings prediction
+        # i = strings(i)
+        # strings_predict = Predictor.strings_predict(i)
 
-        # verdict 
-        i.prediction = lstrcpyA_pred and strings_predict
+        # # verdict 
+        # i.prediction = lstrcpyA_pred and strings_predict
 
-        # # retdec prediction
-        # Predictor.retdec(i)
+        # retdec prediction
+        Predictor.retdec(i)
 
         # check urls of predictions
         if i.prediction and is_dir:
