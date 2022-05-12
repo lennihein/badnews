@@ -3,6 +3,8 @@ import os
 import hashlib
 from src.file import FileInfo, FileSize
 import re
+from alive_progress import alive_it
+from src.pretty_print import BOLD, YELLOW, ENDC, GREEN
 
 def get_domain_suffixes():
     import requests
@@ -17,6 +19,7 @@ def get_domain_suffixes():
     return tuple(sorted(lst))
 
 domain_suffixes=get_domain_suffixes()
+print(f"{BOLD + YELLOW} [*] Fetched Domain Suffixes{ENDC}")
 
 def validate_url(url: str) -> bool:
     regex = re.compile(
@@ -101,8 +104,9 @@ def batch(fn, path):
     runs a function on every file in a directory
     """
     returns = list()
-    for file in sorted(os.listdir(path)):
-        returns.append(fn(path + file))
+    for file in alive_it(sorted(os.listdir(path))):
+        if not "." in file:
+            returns.append(fn(path + file))
     return returns
 
 def get_strings(file_path: str) -> list:

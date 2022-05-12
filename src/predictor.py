@@ -1,7 +1,9 @@
 from src.file import FileInfo
 import pefile
 from capstone import *
-
+from src.pretty_print import BOLD, RED, ENDC
+import subprocess as sp
+import os
 
 class Predictor():
 
@@ -21,7 +23,7 @@ class Predictor():
         return True if len(file.encrypted_urls) >= 2 else False
 
 
-    def capstone(file: FileInfo) -> bool:
+    def lstrcpyA(file: FileInfo) -> bool:
 
         pe = pefile.PE(file.path)
         entryPoint = pe.OPTIONAL_HEADER.AddressOfEntryPoint
@@ -42,3 +44,12 @@ class Predictor():
         except AttributeError:
             return False
         return False
+
+    def retdec(file: FileInfo) -> bool:
+        # print(f"{file.sha256[:6]}: ", end="")
+        if not os.path.isfile(file.path + ".c"):
+            # print("Decompiling...")
+            os.system("retdec-decompiler.py " + file.path + " 1> /dev/null 2>& 1")
+        # else:
+            # print("File already decompiled...")
+        return None

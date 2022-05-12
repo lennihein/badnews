@@ -4,6 +4,9 @@ import sys, os
 from src.pretty_print import file_table, BOLD, WARNING, ENDC, GREEN, YELLOW, RED, BLUE
 from src.tools import file, batch, get_strings
 from src.predictor import Predictor
+from alive_progress import alive_it, config_handler
+
+config_handler.set_global(bar="classic", enrich_print=False)
 
 
 if __name__ == "__main__":
@@ -16,6 +19,7 @@ if __name__ == "__main__":
     is_dir:bool
 
     if os.path.isdir(path):
+        print(f"{BOLD + YELLOW} [*] Checking files in {path}{ENDC}")
         if path[-1] != "/":
             path += "/"
         rets = batch(file, path)
@@ -27,17 +31,26 @@ if __name__ == "__main__":
         print("Please enter a file or directory.")
         exit(0)
 
-    for i in rets:
+    print(f"{BOLD + YELLOW} [*] Fetched {len(rets)} binaries.{ENDC}")
+
+    print(f"{BOLD + YELLOW} [*] Analysing binaries...{ENDC}")
+
+    # with alive_bar(len(rets)) as bar:
+    for i in alive_it(rets):
         strings_predict = Predictor.strings_predict(i)
-        capstone_pred = Predictor.capstone(i)
-        if capstone_pred:
-            i.lstrcpya = capstone_pred
-        i.prediction = capstone_pred and strings_predict
+        lstrcpyA_pred = Predictor.lstrcpyA(i)
+        if lstrcpyA_pred:
+            i.lstrcpya = lstrcpyA_pred
+        i.prediction = lstrcpyA_pred and strings_predict
+
+        # also do retdec decompilation
+        if lstrcpyA_pred:
+            Predictor.retdec(i)
 
         # check urls of predictions
-        if i.prediction:
+        if i.prediction and is_dir:
             rand = i
-            print(file_table([rand], sha265_len=64))
+            print(file_table([rand], ))#sha265_len=64))
             if len(rand.urls) > 0:
                 print(f"{BOLD}Unencrypted URLs:{ENDC}")
                 for url in rand.urls:
@@ -80,7 +93,6 @@ if __name__ == "__main__":
         #         for i in rand.encrypted_urls:
         #             print(f"> {i}")
         #         print()
-
 
     falses = [i for i in rets if i.label!=None and i.prediction != i.label]
     trues = [i for i in rets if i.label!=None and i.prediction == i.label]
