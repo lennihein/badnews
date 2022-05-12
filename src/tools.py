@@ -53,9 +53,6 @@ def sha256(file_path: str) -> str:
 
 
 def file(file_path: str) -> FileInfo:
-    """
-    returns the file contents of a file
-    """
     info = FileInfo(path=file_path)
     proc = sp.Popen(["file", file_path], stdout=sp.PIPE)
     output = proc.stdout.read()
@@ -75,6 +72,17 @@ def file(file_path: str) -> FileInfo:
     info.size = FileSize(os.path.getsize(file_path))
     info.sha256 = sha256(file_path)
 
+    raw_filename = info.path.split("/")[-1]
+
+    if "P" in raw_filename or "p" in raw_filename:
+        info.label = True
+    if "N" in raw_filename or "n" in raw_filename:
+        info.label = False
+
+    return info
+
+def strings(info: FileInfo) -> FileInfo:
+
     proc = sp.Popen(["strings", info.path], stdout=sp.PIPE)
     output = list(map(lambda x: x.decode().strip(), proc.stdout.read().split()))
 
@@ -87,14 +95,7 @@ def file(file_path: str) -> FileInfo:
 
     valid_encrypted_urls = list(filter(validate_url, encrypted_urls))
 
-    info.encrypted_urls = valid_encrypted_urls
-
-    raw_filename = info.path.split("/")[-1]
-
-    if "P" in raw_filename or "p" in raw_filename:
-        info.label = True
-    if "N" in raw_filename or "n" in raw_filename:
-        info.label = False
+    info.encrypted_urls = sorted(valid_encrypted_urls)
 
     return info
 

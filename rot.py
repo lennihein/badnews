@@ -12,5 +12,7 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     if len(args) == 1:
         print(rot(args[0]))
+        print("-----------------------------------------------------")
+        print(rot(args[0], False))
     else:
         print(f"{BOLD}Provide an argument!{ENDC}")

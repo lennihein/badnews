@@ -1,9 +1,12 @@
+from curses import ERR
+from re import U
 from src.file import FileInfo
 import pefile
 from capstone import *
-from src.pretty_print import BOLD, RED, ENDC
+from src.pretty_print import BOLD, RED, ENDC, FAIL
 import subprocess as sp
 import os
+from src.tools import rot, validate_url
 
 class Predictor():
 
@@ -40,16 +43,51 @@ class Predictor():
                     for func in entry.imports:
                         if func.name.decode('utf-8') == 'lstrcpyA':
                             lstrcpyA = func.address
+                            file.lstrcpya = True
                             return True
         except AttributeError:
             return False
         return False
 
     def retdec(file: FileInfo) -> bool:
+        if not file.lstrcpya:
+            file.prediction = False
+            return False
         # print(f"{file.sha256[:6]}: ", end="")
         if not os.path.isfile(file.path + ".c"):
             # print("Decompiling...")
             os.system("retdec-decompiler.py " + file.path + " 1> /dev/null 2>& 1")
         # else:
             # print("File already decompiled...")
-        return None
+        if not os.path.isfile(file.path + ".c"):
+            print(f"{FAIL}{file.sha256[:6]} | retdec decompilation failed{ENDC}")
+            return False
+        
+        # we have a decompiled file, now check for badnews
+
+        with open(file.path + ".c", "r") as f:
+            lines = f.readlines()
+            lstr_lines = []
+            for i, line in enumerate(lines):
+                if "lstrcpyA" in line:
+                    # filter lines with intermediate strings
+                    if '"' in line:
+                        lstr_lines.append(i)          
+
+            # TODO: check if lstrcpyA calls are grouped and at the start of the respective function
+
+            urls = []
+            for i in sorted(lstr_lines):
+                line = lines[i]
+                url = rot(line.split('"')[1]).strip()
+                if validate_url(url):
+                    urls.append(url)
+
+            file.encrypted_urls = urls
+
+            if len(urls) > 0:
+                file.prediction = True
+                return True
+            else:
+                file.prediction = False
+                return False

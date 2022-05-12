@@ -24,3 +24,4 @@ class ToolTests(unittest.TestCase):
         self.assertTrue(validate_url("test.de"))
         self.assertFalse(validate_url("https://kernel32.dll"))
         self.assertTrue(validate_url("bbc.co.uk"))
+        self.assertTrue(validate_url("https://raw.githubusercontent.com/devonkearns/ytrgfvr/master/xml.xml"))
