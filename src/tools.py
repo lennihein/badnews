@@ -7,6 +7,9 @@ from alive_progress import alive_it
 from src.pretty_print import BOLD, YELLOW, ENDC, GREEN, FAIL
 
 def get_domain_suffixes():
+    '''
+    loads valid TLDs
+    '''
     import requests
     res=requests.get('https://publicsuffix.org/list/public_suffix_list.dat')
     lst=set()
@@ -22,6 +25,9 @@ domain_suffixes=get_domain_suffixes()
 print(f"{BOLD + YELLOW} [*] Fetched Domain Suffixes{ENDC}")
 
 def validate_url(url: str) -> bool:
+    '''
+    checks if the given string is a valid url
+    '''
     regex = re.compile(
             r'^(?:http|ftp)s?://' # http:// or https://
             r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?)|' #domain...
@@ -45,6 +51,9 @@ def rot(input: str, decrypt: bool = True) -> str:
 
 
 def sha256(file_path: str) -> str:
+    '''
+    returns the sha256 of a file
+    '''
     sha256_hash = hashlib.sha256()
     with open(file_path, "rb") as f:
         for byte_block in iter(lambda: f.read(4096), b""):
@@ -53,6 +62,9 @@ def sha256(file_path: str) -> str:
 
 
 def file(file_path: str) -> FileInfo:
+    '''
+    given a path, returns a FileInfo object with some info filled in.
+    '''
     info = FileInfo(path=file_path)
     proc = sp.Popen(["file", file_path], stdout=sp.PIPE)
     output = proc.stdout.read()
@@ -82,9 +94,11 @@ def file(file_path: str) -> FileInfo:
     return info
 
 def strings(info: FileInfo) -> FileInfo:
+    '''
+    filters the strings in a file for URLs and encrypted URLs.
+    '''
 
-    proc = sp.Popen(["strings", info.path], stdout=sp.PIPE)
-    output = list(map(lambda x: x.decode().strip(), proc.stdout.read().split()))
+    output = get_strings(info)
 
     output = list(filter(lambda x: '.' in x or '/' in x, output))
 
@@ -111,10 +125,16 @@ def batch(fn, path):
     return returns
 
 def get_strings(file: FileInfo) -> list:
+    '''
+    calls auxillary shell function strings to get all strings in a file
+    '''
     proc = sp.Popen(["strings", file.path], stdout=sp.PIPE)
     return list(map(lambda x: x.decode().strip(), proc.stdout.read().split()))
 
 def check_retdec(file: FileInfo) -> bool:
+    '''
+    checks if a file is decompiled by retdec already, if not, tries to decompile it
+    '''
     # print(f"{file.sha256[:6]}: ", end="")
     if not os.path.isfile(file.path + ".c"):
         # print("Decompiling...")
@@ -127,15 +147,15 @@ def check_retdec(file: FileInfo) -> bool:
     return True
 
 def get_strings_retdec(file: FileInfo) -> list:
+    '''
+    gets userstrings from a file decompiled by retdec
+    '''
+    strings = []
     if not check_retdec(file):
-        return []
-    
-    # we have a decompiled file
-
+        return strings
     with open(file.path + ".c", "r") as f:
         lines = f.readlines()
         str_lines = list(filter(lambda x: '"' in x, lines))
-        strings = []
         for line in str_lines:
             line = line.split('"')
             for i, string in enumerate(line):

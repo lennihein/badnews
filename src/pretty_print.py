@@ -38,6 +38,9 @@ rows: int = 30
 
 
 def get_terminal_size():
+    '''
+    you know what this does
+    '''
     global columns, rows
     try:
         columns, rows = os.get_terminal_size(0)
@@ -55,6 +58,7 @@ def print_centre(text: str, length: int) -> str:
 def file_table(table, sha265_len: int = 8,
                print_seperator: bool = False, limit: int = -1) -> str:
     """
+    prints a table of FileInfo objects
     ╭────────┬────────┬────────┬─────┬─────┬──────────╮
     │ sha256 │  size  │  arch  │ GUI │ DLL │ LSTRCPYA │
     ├────────┼────────┼────────┼─────┼─────┼──────────┼
