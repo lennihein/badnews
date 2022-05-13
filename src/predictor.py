@@ -6,28 +6,14 @@ from capstone import *
 from src.pretty_print import BOLD, RED, ENDC, FAIL
 import subprocess as sp
 import os
-from src.tools import check_retdec, rot, validate_url
+from src.tools import check_retdec, rot, validate_url, strings
 
 class Predictor():
 
-    def update_file(file: FileInfo, pred_f) -> FileInfo:
-        file.prediction = pred_f(file)
-        return file
-
-    def strings_predict(file: FileInfo) -> bool:
-        # so far almost none of the delphi GUI applications have been badnews samples
-        if file.GUI:
-            # but badnews loves themselves some xml files
-            for i in file.encrypted_urls:
-                if "xml" in i:
-                    return True
-            return False
-        # if at least 2 encrypted urls exist, it's probably a badnews sample
-        return True if len(file.encrypted_urls) >= 2 else False
-
-
     def lstrcpyA(file: FileInfo) -> bool:
-
+        '''
+        a helper function to check if lstrcpyA is imported
+        '''
         pe = pefile.PE(file.path)
         entryPoint = pe.OPTIONAL_HEADER.AddressOfEntryPoint
         data = pe.get_memory_mapped_image()[entryPoint:]
@@ -49,7 +35,42 @@ class Predictor():
             return False
         return False
 
+    def naive(file: FileInfo) -> bool:
+        '''
+        a naive predictor that checks for encrypted strings in the binary, IF lstrcpyA is imported
+        '''
+        if file.lstrcpya == None:
+            file.lstrcpya = Predictor.lstrcpyA(file)
+
+        if file.lstrcpya == False:
+            file.prediction = False
+            return False
+
+        if not file.urls:
+            file = strings(file)
+        # so far almost none of the delphi GUI applications have been badnews samples
+        if file.GUI:
+            # but badnews loves themselves some xml files
+            for i in file.encrypted_urls:
+                if "xml" in i:
+                    file.prediction = True
+                    return True
+            file.prediction = False
+            return False
+        # if at least 2 encrypted urls exist, it's probably a badnews sample
+        file.prediction = True if len(file.encrypted_urls) >= 2 else False
+        return file.prediction
+
     def retdec(file: FileInfo) -> bool:
+        '''
+        An advanced predictor that uses retdec to decompile the binaries. 
+        (Only checks those which import lstrcpyA)
+        Checks for multiple calls of lstrcpyA on intermediate user strings, 
+        at the start of the respective functions.
+        '''        
+
+        if file.lstrcpya == None:
+            Predictor.lstrcpyA(file)
 
         if not file.lstrcpya:
             file.prediction = False
@@ -80,7 +101,7 @@ class Predictor():
 
             file.encrypted_urls = sorted(urls)
 
-            if len(urls) > 0:
+            if len(urls) >= 2:
                 file.prediction = True
                 return True
             else:

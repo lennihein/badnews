@@ -2,21 +2,22 @@
 
 import sys, os
 from src.pretty_print import file_table, BOLD, WARNING, ENDC, GREEN, YELLOW, RED, BLUE
-from src.tools import file, batch, strings, get_strings, get_strings_retdec
+from src.tools import file, batch, get_strings, get_strings_retdec
 from src.predictor import Predictor
 from alive_progress import alive_it, config_handler
 
 
-######################### 
-LIFTER          = True  #
-PRINT_ALL       = False #
-DETAILED_POS    = True  #
-CHECK_NOLSTRCPY = False #
-CHECK_NO_URL    = False #
-GIVE_SUGGESTION = False #
-FIND_UNIQUES    = True  #
-LIST_LABELED    = False #
-#########################
+###############################################################################
+# available predictors: retdec, naive
+PREDICTOR = Predictor.retdec
+PRINT_ALL       = False 
+DETAILED_POS    = True  
+CHECK_NOLSTRCPY = False 
+CHECK_NO_URL    = False 
+GIVE_SUGGESTION = False 
+FIND_UNIQUES    = True  
+LIST_LABELED    = False 
+###############################################################################
 
 
 config_handler.set_global(bar="classic", enrich_print=False)
@@ -52,18 +53,8 @@ if __name__ == "__main__":
     # rets = list(map(strings, rets))
 
     for i in alive_it(rets):
-
-        # lstrcpyA prediction
-        lstrcpyA_pred = Predictor.lstrcpyA(i)
         
-        if not LIFTER:
-            # strings prediction
-            i = strings(i)
-            strings_predict = Predictor.strings_predict(i)
-            i.prediction = lstrcpyA_pred and strings_predict
-        else:
-            # retdec prediction
-            Predictor.retdec(i)
+        PREDICTOR(i)
 
         # check urls of predictions
         if DETAILED_POS:
