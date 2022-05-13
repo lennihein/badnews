@@ -1,0 +1,651 @@
+{
+    "date": "2022-05-13",
+    "time": "17:19:25",
+    "inputFile": "/home/lenni/lifting/samples/7ce9d8d934d0f37ededfe1418af9e3dcb5396ba0efb1ebc14d0c147a0736da48_N",
+    "entryPoint": "0x6ea5f8",
+    "imageBase": "0x400000",
+    "decompParams": {
+        "verboseOut": false,
+        "keepAllFuncs": false,
+        "selectedDecodeOnly": false,
+        "outputFile": "/home/lenni/lifting/samples/7ce9d8d934d0f37ededfe1418af9e3dcb5396ba0efb1ebc14d0c147a0736da48_N.c",
+        "ordinalNumDirectory": "/usr/bin/../share/retdec/support/x86/ords/",
+        "staticSignPaths": [
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/kb2.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/kb2006.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/kb2007.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/kb2009.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/kb2010.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/kb2011.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/kb2012.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/kb2013.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/kb2014.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/kb3.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/kb4.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/kb5.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/kb6.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/kb7.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/syskb2.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/syskb2005.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/syskb2006.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/syskb2007.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/syskb2009.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/syskb2010.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/syskb2011.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/syskb2012.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/syskb2013.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/syskb2014.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/syskb3.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/syskb4.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/syskb5.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/syskb6.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/delphi/syskb7.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/ucrt/x86-debug.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/ucrt/x86.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-debug-vs-2003.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-debug-vs-2005.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-debug-vs-2008.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-debug-vs-2010.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-debug-vs-2012.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-debug-vs-2013.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-debug-vs-2015.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-debug-vs-2017.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-mingw-4.7.3.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-vs-2003.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-vs-2005.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-vs-2008.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-vs-2010.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-vs-2012.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-vs-2013.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-vs-2015.yarac",
+            "/usr/bin/../share/retdec/support/generic/yara_patterns/static-code/pe/32/le/x86/x86-vs-2017.yarac"
+        ],
+        "libraryTypeInfoPaths": [
+            "/usr/bin/../share/retdec/support/generic/types/arm.json",
+            "/usr/bin/../share/retdec/support/generic/types/cstdlib.json",
+            "/usr/bin/../share/retdec/support/generic/types/linux.json",
+            "/usr/bin/../share/retdec/support/generic/types/windows.json",
+            "/usr/bin/../share/retdec/support/generic/types/windrivers.json"
+        ]
+    },
+    "architecture": {
+        "name": "x86",
+        "bitSize": 32,
+        "endian": "little"
+    },
+    "fileType": "executable",
+    "fileFormat": "pe32",
+    "tools": [
+        {
+            "type": "linker",
+            "name": "borland",
+            "percentage": 0.0,
+            "percentage": 0,
+            "percentage": 0,
+            "heuristics": true
+        },
+        {
+            "type": "compiler",
+            "name": "borland delphi",
+            "percentage": 0.0,
+            "percentage": 0,
+            "percentage": 0,
+            "heuristics": true
+        }
+    ],
+    "patterns": [
+        {
+            "name": "zinflate_distanceStarts",
+            "description": "zinflate_distanceStarts (32-bit, little endian)",
+            "yaraRule": "zinflate_distanceStarts__32_lil_120_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x3198f0",
+                    "address": "0x71acf0",
+                    "size": 120,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "Adler_CRC32__0x01c26a37_",
+            "description": "Adler_CRC32__0x01c26a37_ (32-bit, little endian)",
+            "yaraRule": "Adler_CRC32__0x01c26a37___32_lil_1024_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2ecf74",
+                    "address": "0x6ee374",
+                    "size": 1024,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "zinflate_lengthExtraBits",
+            "description": "zinflate_lengthExtraBits (32-bit, little endian)",
+            "yaraRule": "zinflate_lengthExtraBits__32_lil_116_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2ebd08",
+                    "address": "0x6ed108",
+                    "size": 116,
+                    "entrySize": 4,
+                    "type": "integral"
+                },
+                {
+                    "offset": "0x318d14",
+                    "address": "0x71a114",
+                    "size": 116,
+                    "entrySize": 4,
+                    "type": "integral"
+                },
+                {
+                    "offset": "0x319874",
+                    "address": "0x71ac74",
+                    "size": 116,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "Zlib_base_length",
+            "description": "Zlib_base_length (32-bit, little endian)",
+            "yaraRule": "Zlib_base_length__32_lil_116_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2ec338",
+                    "address": "0x6ed738",
+                    "size": 116,
+                    "entrySize": 4,
+                    "type": "integral"
+                },
+                {
+                    "offset": "0x319344",
+                    "address": "0x71a744",
+                    "size": 116,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "unlzx_table_three",
+            "description": "unlzx_table_three (32-bit, little endian)",
+            "yaraRule": "unlzx_table_three__32_lil_64_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x3014dc",
+                    "address": "0x7028dc",
+                    "size": 64,
+                    "entrySize": 4,
+                    "type": "integral"
+                },
+                {
+                    "offset": "0x31acec",
+                    "address": "0x71c0ec",
+                    "size": 64,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "libavcodec_ff_mjpeg_val_ac_chrominance",
+            "description": "libavcodec_ff_mjpeg_val_ac_chrominance (8-bit, little endian)",
+            "yaraRule": "libavcodec_ff_mjpeg_val_ac_chrominance__8_byt_162_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2f0ae6",
+                    "address": "0x6f1ee6",
+                    "size": 162,
+                    "entrySize": 1,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "B64EncodeTable",
+            "description": "B64EncodeTable (8-bit, little endian)",
+            "yaraRule": "B64EncodeTable__8_byt_ASC_64_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x301e5c",
+                    "address": "0x70325c",
+                    "size": 64,
+                    "entrySize": 1,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "zinflate_distanceExtraBits",
+            "description": "zinflate_distanceExtraBits (32-bit, big endian)",
+            "yaraRule": "zinflate_distanceExtraBits__32_big_120_",
+            "type": "crypto",
+            "endian": "big",
+            "matches": [
+                {
+                    "offset": "0x2ebd79",
+                    "address": "0x6ed179",
+                    "size": 120,
+                    "entrySize": 4,
+                    "type": "integral"
+                },
+                {
+                    "offset": "0x318d85",
+                    "address": "0x71a185",
+                    "size": 120,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "Adler_CRC32__0x191b3141_",
+            "description": "Adler_CRC32__0x191b3141_ (32-bit, little endian)",
+            "yaraRule": "Adler_CRC32__0x191b3141___32_lil_1024_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2ecb74",
+                    "address": "0x6edf74",
+                    "size": 1024,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "Zlib_base_dist",
+            "description": "Zlib_base_dist (32-bit, little endian)",
+            "yaraRule": "Zlib_base_dist__32_lil_120_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2ec3ac",
+                    "address": "0x6ed7ac",
+                    "size": 120,
+                    "entrySize": 4,
+                    "type": "integral"
+                },
+                {
+                    "offset": "0x3193b8",
+                    "address": "0x71a7b8",
+                    "size": 120,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "Jpeg_dct_14_bit_aanscales",
+            "description": "Jpeg_dct_14_bit_aanscales (16-bit, little endian)",
+            "yaraRule": "Jpeg_dct_14_bit_aanscales__16_lil_128_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2f05e8",
+                    "address": "0x6f19e8",
+                    "size": 128,
+                    "entrySize": 2,
+                    "type": "integral"
+                },
+                {
+                    "offset": "0x2f0b88",
+                    "address": "0x6f1f88",
+                    "size": 128,
+                    "entrySize": 2,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "zinflate_lengthStarts",
+            "description": "zinflate_lengthStarts (16-bit, little endian)",
+            "yaraRule": "zinflate_lengthStarts__16_lil_58_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2ebb8c",
+                    "address": "0x6ecf8c",
+                    "size": 58,
+                    "entrySize": 2,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "zinflate_lengthExtraBits",
+            "description": "zinflate_lengthExtraBits (32-bit, big endian)",
+            "yaraRule": "zinflate_lengthExtraBits__32_big_116_",
+            "type": "crypto",
+            "endian": "big",
+            "matches": [
+                {
+                    "offset": "0x319871",
+                    "address": "0x71ac71",
+                    "size": 116,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "zinflate_distanceStarts",
+            "description": "zinflate_distanceStarts (16-bit, little endian)",
+            "yaraRule": "zinflate_distanceStarts__16_lil_60_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2ebc08",
+                    "address": "0x6ed008",
+                    "size": 60,
+                    "entrySize": 2,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "libavcodec_ff_mjpeg_val_ac_luminance",
+            "description": "libavcodec_ff_mjpeg_val_ac_luminance (8-bit, little endian)",
+            "yaraRule": "libavcodec_ff_mjpeg_val_ac_luminance__8_byt_162_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2f0a33",
+                    "address": "0x6f1e33",
+                    "size": 162,
+                    "entrySize": 1,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "Adler_CRC32__0x191b3141_",
+            "description": "Adler_CRC32__0x191b3141_ (32-bit, big endian)",
+            "yaraRule": "Adler_CRC32__0x191b3141___32_big_1024_",
+            "type": "crypto",
+            "endian": "big",
+            "matches": [
+                {
+                    "offset": "0x2edb74",
+                    "address": "0x6eef74",
+                    "size": 1024,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "Zlib_length_code",
+            "description": "Zlib_length_code (8-bit, little endian)",
+            "yaraRule": "Zlib_length_code__8_byt_256_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2ec673",
+                    "address": "0x6eda73",
+                    "size": 256,
+                    "entrySize": 1,
+                    "type": "integral"
+                },
+                {
+                    "offset": "0x31967f",
+                    "address": "0x71aa7f",
+                    "size": 256,
+                    "entrySize": 1,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "Jpeg_dct_AA_N_scale_factor",
+            "description": "Jpeg_dct_AA_N_scale_factor (64-bit, little endian)",
+            "yaraRule": "Jpeg_dct_AA_N_scale_factor__flt64___64_lil_64_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2f0668",
+                    "address": "0x6f1a68",
+                    "size": 64,
+                    "entrySize": 8,
+                    "type": "floatingPoint"
+                },
+                {
+                    "offset": "0x2f0c08",
+                    "address": "0x6f2008",
+                    "size": 64,
+                    "entrySize": 8,
+                    "type": "floatingPoint"
+                }
+            ]
+        },
+        {
+            "name": "zinflate_lengthStarts",
+            "description": "zinflate_lengthStarts (32-bit, little endian)",
+            "yaraRule": "zinflate_lengthStarts__32_lil_116_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x3197f8",
+                    "address": "0x71abf8",
+                    "size": 116,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "libdjvu_GPixmap_dither_table",
+            "description": "libdjvu_GPixmap_dither_table (8-bit, little endian)",
+            "yaraRule": "libdjvu_GPixmap_dither_table__8_byt_256_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2f04dc",
+                    "address": "0x6f18dc",
+                    "size": 256,
+                    "entrySize": 1,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "Adler_CRC32__0xb8bc6765_",
+            "description": "Adler_CRC32__0xb8bc6765_ (32-bit, big endian)",
+            "yaraRule": "Adler_CRC32__0xb8bc6765___32_big_1024_",
+            "type": "crypto",
+            "endian": "big",
+            "matches": [
+                {
+                    "offset": "0x2ee374",
+                    "address": "0x6ef774",
+                    "size": 1024,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "CRC_32_IEEE_802_3_poly_0x04C11DB7",
+            "description": "CRC_32_IEEE_802_3_poly_0x04C11DB7 (32-bit, little endian)",
+            "yaraRule": "CRC_32_IEEE_802_3_poly_0x04C11DB7__32_lil_refl_True_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2ec774",
+                    "address": "0x6edb74",
+                    "size": 1024,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "Adler_CRC32__0x01c26a37_",
+            "description": "Adler_CRC32__0x01c26a37_ (32-bit, big endian)",
+            "yaraRule": "Adler_CRC32__0x01c26a37___32_big_1024_",
+            "type": "crypto",
+            "endian": "big",
+            "matches": [
+                {
+                    "offset": "0x2edf74",
+                    "address": "0x6ef374",
+                    "size": 1024,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "ACSS_reverse_sbox",
+            "description": "ACSS_reverse_sbox (8-bit, little endian)",
+            "yaraRule": "ACSS_reverse_sbox__8_byt_256_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2fe85c",
+                    "address": "0x6ffc5c",
+                    "size": 256,
+                    "entrySize": 1,
+                    "type": "integral"
+                },
+                {
+                    "offset": "0x3002d8",
+                    "address": "0x7016d8",
+                    "size": 256,
+                    "entrySize": 1,
+                    "type": "integral"
+                },
+                {
+                    "offset": "0x301d50",
+                    "address": "0x703150",
+                    "size": 256,
+                    "entrySize": 1,
+                    "type": "integral"
+                },
+                {
+                    "offset": "0x317554",
+                    "address": "0x718954",
+                    "size": 256,
+                    "entrySize": 1,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "Adler_CRC32__0xb8bc6765_",
+            "description": "Adler_CRC32__0xb8bc6765_ (32-bit, little endian)",
+            "yaraRule": "Adler_CRC32__0xb8bc6765___32_lil_1024_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2ed374",
+                    "address": "0x6ee774",
+                    "size": 1024,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "Zlib_dist_code",
+            "description": "Zlib_dist_code (8-bit, little endian)",
+            "yaraRule": "Zlib_dist_code__8_byt_512_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2ec473",
+                    "address": "0x6ed873",
+                    "size": 512,
+                    "entrySize": 1,
+                    "type": "integral"
+                },
+                {
+                    "offset": "0x31947f",
+                    "address": "0x71a87f",
+                    "size": 512,
+                    "entrySize": 1,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "zinflate_distanceExtraBits",
+            "description": "zinflate_distanceExtraBits (32-bit, little endian)",
+            "yaraRule": "zinflate_distanceExtraBits__32_lil_120_",
+            "type": "crypto",
+            "endian": "little",
+            "matches": [
+                {
+                    "offset": "0x2ebd7c",
+                    "address": "0x6ed17c",
+                    "size": 120,
+                    "entrySize": 4,
+                    "type": "integral"
+                },
+                {
+                    "offset": "0x318d88",
+                    "address": "0x71a188",
+                    "size": 120,
+                    "entrySize": 4,
+                    "type": "integral"
+                },
+                {
+                    "offset": "0x319968",
+                    "address": "0x71ad68",
+                    "size": 120,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        },
+        {
+            "name": "CRC_32_IEEE_802_3_poly_0x04C11DB7",
+            "description": "CRC_32_IEEE_802_3_poly_0x04C11DB7 (32-bit, big endian)",
+            "yaraRule": "CRC_32_IEEE_802_3_poly_0x04C11DB7__32_big_refl_True_",
+            "type": "crypto",
+            "endian": "big",
+            "matches": [
+                {
+                    "offset": "0x2ed774",
+                    "address": "0x6eeb74",
+                    "size": 1024,
+                    "entrySize": 4,
+                    "type": "integral"
+                }
+            ]
+        }
+    ]
+}

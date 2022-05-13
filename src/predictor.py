@@ -6,7 +6,7 @@ from capstone import *
 from src.pretty_print import BOLD, RED, ENDC, FAIL
 import subprocess as sp
 import os
-from src.tools import rot, validate_url
+from src.tools import check_retdec, rot, validate_url
 
 class Predictor():
 
@@ -50,19 +50,14 @@ class Predictor():
         return False
 
     def retdec(file: FileInfo) -> bool:
+
         if not file.lstrcpya:
             file.prediction = False
             return False
-        # print(f"{file.sha256[:6]}: ", end="")
-        if not os.path.isfile(file.path + ".c"):
-            # print("Decompiling...")
-            os.system("retdec-decompiler.py " + file.path + " 1> /dev/null 2>& 1")
-        # else:
-            # print("File already decompiled...")
-        if not os.path.isfile(file.path + ".c"):
-            print(f"{FAIL}{file.sha256[:6]} | retdec decompilation failed{ENDC}")
-            return False
         
+        if not check_retdec(file):
+            return False
+
         # we have a decompiled file, now check for badnews
 
         with open(file.path + ".c", "r") as f:

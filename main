@@ -2,9 +2,22 @@
 
 import sys, os
 from src.pretty_print import file_table, BOLD, WARNING, ENDC, GREEN, YELLOW, RED, BLUE
-from src.tools import file, batch, strings
+from src.tools import file, batch, strings, get_strings, get_strings_retdec
 from src.predictor import Predictor
 from alive_progress import alive_it, config_handler
+
+
+######################### 
+LIFTER          = True  #
+PRINT_ALL       = False #
+DETAILED_POS    = True  #
+CHECK_NOLSTRCPY = False #
+CHECK_NO_URL    = False #
+GIVE_SUGGESTION = False #
+FIND_UNIQUES    = True  #
+LIST_LABELED    = False #
+#########################
+
 
 config_handler.set_global(bar="classic", enrich_print=False)
 
@@ -42,62 +55,62 @@ if __name__ == "__main__":
 
         # lstrcpyA prediction
         lstrcpyA_pred = Predictor.lstrcpyA(i)
-
-        # # strings prediction
-        # i = strings(i)
-        # strings_predict = Predictor.strings_predict(i)
-
-        # # verdict 
-        # i.prediction = lstrcpyA_pred and strings_predict
-
-        # retdec prediction
-        Predictor.retdec(i)
+        
+        if not LIFTER:
+            # strings prediction
+            i = strings(i)
+            strings_predict = Predictor.strings_predict(i)
+            i.prediction = lstrcpyA_pred and strings_predict
+        else:
+            # retdec prediction
+            Predictor.retdec(i)
 
         # check urls of predictions
-        if i.prediction and is_dir:
-            print(file_table([i], ))#sha265_len=64))
-            if i.urls and len(i.urls) > 0:
-                print(f"{BOLD}Unencrypted URLs:{ENDC}")
-                for url in i.urls:
-                    print(f"> {url}")
-                print()
-            if i.encrypted_urls and len(i.encrypted_urls) > 0:
-                print(f"{BOLD}Encrypted URLs:{ENDC}")
-                for url in i.encrypted_urls:
-                    print(f"> {url}")
-                print()
+        if DETAILED_POS:
+            if i.prediction and is_dir:
+                print(file_table([i], ))#sha265_len=64))
+                if i.urls and len(i.urls) > 0:
+                    print(f"{BOLD}Unencrypted URLs:{ENDC}")
+                    for url in i.urls:
+                        print(f"> {url}")
+                    print()
+                if i.encrypted_urls and len(i.encrypted_urls) > 0:
+                    print(f"{BOLD}Encrypted URLs:{ENDC}")
+                    for url in i.encrypted_urls:
+                        print(f"> {url}")
+                    print()
         
-        # # check stringpred but no lstrcpya
-        # if strings_predict == True and capstone_pred == False:
-        #     print(f"{WARNING}{i.sha256[:6]} | lstrcpya not imported but possibly badnews {ENDC}")
-        #     rand = i
-        #     print(file_table([rand], sha265_len=64))
-        #     if len(rand.urls) > 0:
-        #         print(f"{BOLD}The following URLs are unencrypted:{ENDC}")
-        #         for i in rand.urls:
-        #             print(f"> {i}")
-        #         print()
-        #     if len(rand.encrypted_urls) > 0:
-        #         print(f"{BOLD}The following URLs are encrypted:{ENDC}")
-        #         for i in rand.encrypted_urls:
-        #             print(f"> {i}")
-        #         print()
+        # check pred but no lstrcpya
+        if CHECK_NOLSTRCPY:
+            if i.prediction == True and i.lstrcpya == False:
+                print(f"{BOLD + RED} [*] lstrcpya not imported but possibly badnews:{ENDC}")
+                print(file_table([i], sha265_len=6))
+                if i.urls and len(i.urls) > 0:
+                    print(f"{BOLD}The following URLs are unencrypted:{ENDC}")
+                    for j in i.urls:
+                        print(f"> {j}")
+                    print()
+                if i.encrypted_urls and len(i.encrypted_urls) > 0:
+                    print(f"{BOLD}The following URLs are encrypted:{ENDC}")
+                    for j in i.encrypted_urls:
+                        print(f"> {j}")
+                    print()
 
-        # # check lstrcpya importing, but not url encrypting
-        # if i.prediction == False and capstone_pred == True:
-        #     print(f"{WARNING}{i.sha256[:6]} | lstrcpya imported but NOT badnews {ENDC}")
-        #     rand = i
-        #     print(file_table([rand], sha265_len=64))
-        #     if len(rand.urls) > 0:
-        #         print(f"{BOLD}The following URLs are unencrypted:{ENDC}")
-        #         for i in rand.urls:
-        #             print(f"> {i}")
-        #         print()
-        #     if len(rand.encrypted_urls) > 0:
-        #         print(f"{BOLD}The following URLs are encrypted:{ENDC}")
-        #         for i in rand.encrypted_urls:
-        #             print(f"> {i}")
-        #         print()
+        # check lstrcpya importing, but not url encrypting
+        if CHECK_NO_URL:
+            if i.prediction == False and i.lstrcpya == True:
+                print(f"{BOLD + RED} [*] lstrcpya imported but NOT predicted as badnews:{ENDC}")
+                print(file_table([i], sha265_len=6))
+                if i.urls and len(i.urls) > 0:
+                    print(f"{BOLD}The following URLs are unencrypted:{ENDC}")
+                    for j in i.urls:
+                        print(f"> {j}")
+                    print()
+                if i.encrypted_urls and len(i.encrypted_urls) > 0:
+                    print(f"{BOLD}The following URLs are encrypted:{ENDC}")
+                    for j in i.encrypted_urls:
+                        print(f"> {j}")
+                    print()
 
     falses = [i for i in rets if i.label!=None and i.prediction != i.label]
     trues = [i for i in rets if i.label!=None and i.prediction == i.label]
@@ -109,8 +122,9 @@ if __name__ == "__main__":
 
     # print table
     if is_dir:
-        print(f"\n{BOLD}The following samples have been manually labeled:{ENDC}")
-        print(file_table(labeled), end="")
+        if not PRINT_ALL:
+            print(f"\n{BOLD}The following samples have been manually labeled:{ENDC}")
+        print(file_table(rets if PRINT_ALL else labeled), end="")
         print(f"{GREEN}True Positive{ENDC}, {BLUE}True Negative{ENDC}, {RED}False Positive{ENDC}, {YELLOW}False Negative{ENDC}\n")
     else:
         print(file_table(rets), end="")
@@ -133,24 +147,24 @@ if __name__ == "__main__":
         print(f"{BOLD}Accuracy on labeled samples: {accuracy*100:2.0f}% ({len(trues)}/{len(trues)+len(falses)}){ENDC}")
         print(f"{BOLD}Overall Predicted {len(positives)} positives and {len(negatives)} negatives{ENDC}")
 
-    # # give suggestion for next analysis
-    # if is_dir:
-    #     pos_needed = len(true_pos) <= len(true_neg)
-    #     print(f"\nHere is a random sample of the {'positives' if pos_needed else 'negatives'} without label:")
-    #     no_label = [i for i in (positives if pos_needed else negatives) if i.label is None]
-    #     import random
-    #     rand = random.choice(no_label)
-    #     print(file_table([rand], sha265_len=64))
-    #     if len(rand.urls) > 0:
-    #         print(f"{BOLD}Unencrypted URLs:{ENDC}")
-    #         for i in rand.urls:   
-    #             print(f"> {i}")
-    #         print()
-    #     if len(rand.encrypted_urls) > 0:
-    #         print(f"{BOLD}Encrypted URLs:{ENDC}")
-    #         for i in rand.encrypted_urls:
-    #             print(f"> {i}")
-    #         print()
+    # give suggestion for next analysis
+    if is_dir and GIVE_SUGGESTION:
+        pos_needed = len(true_pos) <= len(true_neg)
+        print(f"\nHere is a random sample of the {'positives' if pos_needed else 'negatives'} without label:")
+        no_label = [i for i in (positives if pos_needed else negatives) if i.label is None]
+        import random
+        rand = random.choice(no_label)
+        print(file_table([rand], sha265_len=64))
+        if rand.urls and len(rand.urls) > 0:
+            print(f"{BOLD}Unencrypted URLs:{ENDC}")
+            for i in rand.urls:   
+                print(f"> {i}")
+            print()
+        if rand.encrypted_urls and len(rand.encrypted_urls) > 0:
+            print(f"{BOLD}Encrypted URLs:{ENDC}")
+            for i in rand.encrypted_urls:
+                print(f"> {i}")
+            print()
 
     # print out results as jsonl
     if is_dir:
@@ -159,25 +173,44 @@ if __name__ == "__main__":
             f.write(i.to_json())
         f.close()
 
-    # # find strings that are unique to badnews
-    # if is_dir:
-    #     badnews_strings = get_strings(true_pos[0].path)
-    #     for i in true_pos:
-    #         new_strings = get_strings(i.path)
-    #         badnews_strings = filter(lambda x: x in new_strings, badnews_strings)
-    #     for i in true_neg:
-    #         new_strings = get_strings(i.path)
-    #         badnews_strings = filter(lambda x: x not in new_strings, badnews_strings)
-    #     print("\nHere are the strings that are unique to badnews:")
-    #     for i in badnews_strings:
-    #         print(f"> {i}")
+    # find strings that are unique to badnews
+    if is_dir and FIND_UNIQUES:
+        print(f"\n{BOLD+YELLOW} [*] Finding unique strings...{ENDC}")
+        badnews_strings = {}
+        for i in alive_it(positives):
+            new_strings = list(set(get_strings_retdec(i)))
+            for j in new_strings:
+                if j not in badnews_strings:
+                    badnews_strings[j] = 1
+                else:
+                    badnews_strings[j] += 1
+        
+        for i in alive_it(negatives):
+            new_strings = get_strings(i)
+            for j in new_strings:
+                if j in badnews_strings:
+                    del badnews_strings[j]
 
-    # # print labeled samples:
-    # if is_dir:
-    #     print("")
-    #     print(f"{BOLD}Known Badnews Samples:{ENDC}")
-    #     for i in true_pos:
-    #         print(f"> {i.sha256}")
-    #     print(f"{BOLD}Known Goodnews Samples:{ENDC}")
-    #     for i in true_neg:
-    #         print(f"> {i.sha256}")
+        # limit to the good ones
+        badnews_strings = dict(filter(lambda x: x[1]/len(positives) >= 75/100, badnews_strings.items()))
+
+        print("\nHere are the strings that are unique to badnews:")
+        max_length = max([len(i) for i in badnews_strings])
+        line = '─' * (max_length+2)
+        print(f"╭──────┬{line}╮")
+        print(f"│ {'Prev':^3} │ {'String':^{max_length}} │")
+        print(f"├──────┼{line}┤")
+        for w in sorted(badnews_strings, key=badnews_strings.get, reverse=True):
+            num = str(badnews_strings[w]/len(positives)*100).split(".")[0]
+            print(f"│ {num: >3}% │ {w:<{max_length}} │")
+        print(f"╰──────┴{line}╯")
+
+    # print labeled samples:
+    if is_dir and LIST_LABELED:
+        print("")
+        print(f"{BOLD}Known Badnews Samples:{ENDC}")
+        for i in true_pos:
+            print(f"> {i.sha256}")
+        print(f"{BOLD}Known Goodnews Samples:{ENDC}")
+        for i in true_neg:
+            print(f"> {i.sha256}")

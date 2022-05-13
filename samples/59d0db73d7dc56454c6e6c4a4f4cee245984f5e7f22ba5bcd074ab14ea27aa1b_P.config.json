@@ -1,6 +1,6 @@
 {
     "date": "2022-05-13",
-    "time": "01:11:45",
+    "time": "17:14:24",
     "inputFile": "/home/lenni/lifting/samples/59d0db73d7dc56454c6e6c4a4f4cee245984f5e7f22ba5bcd074ab14ea27aa1b_P",
     "entryPoint": "0x10011e0f",
     "imageBase": "0x10000000",
@@ -90380,8 +90380,8 @@
         {
             "name": ".?AV?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@",
             "superClasses": [
-                ".?AV_Facet_base@std@@",
                 ".?AVfacet@locale@std@@",
+                ".?AV_Facet_base@std@@",
                 ".?AU_Crt_new_delete@std@@"
             ],
             "virtualMethods": [
@@ -90404,8 +90404,8 @@
         {
             "name": ".?AV?$numpunct@D@std@@",
             "superClasses": [
-                ".?AV_Facet_base@std@@",
                 ".?AVfacet@locale@std@@",
+                ".?AV_Facet_base@std@@",
                 ".?AU_Crt_new_delete@std@@"
             ],
             "virtualMethods": [
@@ -90475,8 +90475,8 @@
         {
             "name": ".?AV_System_error@std@@",
             "superClasses": [
-                ".?AVruntime_error@std@@",
-                ".?AVexception@std@@"
+                ".?AVexception@std@@",
+                ".?AVruntime_error@std@@"
             ],
             "virtualMethods": [
                 "function_100012b0",
@@ -90514,8 +90514,8 @@
         {
             "name": ".?AVbad_array_new_length@std@@",
             "superClasses": [
-                ".?AVbad_alloc@std@@",
-                ".?AVexception@std@@"
+                ".?AVexception@std@@",
+                ".?AVbad_alloc@std@@"
             ],
             "virtualMethods": [
                 "??_G__non_rtti_object@std@@UAEPAXI@Z",

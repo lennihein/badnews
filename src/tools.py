@@ -4,7 +4,7 @@ import hashlib
 from src.file import FileInfo, FileSize
 import re
 from alive_progress import alive_it
-from src.pretty_print import BOLD, YELLOW, ENDC, GREEN
+from src.pretty_print import BOLD, YELLOW, ENDC, GREEN, FAIL
 
 def get_domain_suffixes():
     import requests
@@ -110,6 +110,35 @@ def batch(fn, path):
             returns.append(fn(path + file))
     return returns
 
-def get_strings(file_path: str) -> list:
-    proc = sp.Popen(["strings", file_path], stdout=sp.PIPE)
+def get_strings(file: FileInfo) -> list:
+    proc = sp.Popen(["strings", file.path], stdout=sp.PIPE)
     return list(map(lambda x: x.decode().strip(), proc.stdout.read().split()))
+
+def check_retdec(file: FileInfo) -> bool:
+    # print(f"{file.sha256[:6]}: ", end="")
+    if not os.path.isfile(file.path + ".c"):
+        # print("Decompiling...")
+        os.system("timeout 15s retdec-decompiler.py " + file.path + " 1> /dev/null 2>& 1")
+    # else:
+        # print("File already decompiled...")
+    if not os.path.isfile(file.path + ".c"):
+        print(f"{FAIL}{file.sha256[:6]} [*] retdec decompilation failed{ENDC}")
+        return False
+    return True
+
+def get_strings_retdec(file: FileInfo) -> list:
+    if not check_retdec(file):
+        return []
+    
+    # we have a decompiled file
+
+    with open(file.path + ".c", "r") as f:
+        lines = f.readlines()
+        str_lines = list(filter(lambda x: '"' in x, lines))
+        strings = []
+        for line in str_lines:
+            line = line.split('"')
+            for i, string in enumerate(line):
+                if i % 2 == 1:
+                    strings.append(string)
+        return list(strings)

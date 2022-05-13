@@ -458,17 +458,17 @@ struct vtable_10039d30_type {
 // .?AV?$basic_ios@DU?$char_traits@D@std@@@std@@ (base classes: .?AVios_base@std@@, .?AV?$_Iosb@H@std@@)
 // .?AV?$basic_ostream@DU?$char_traits@D@std@@@std@@ (base classes: .?AV?$basic_ios@DU?$char_traits@D@std@@@std@@, .?AVios_base@std@@, .?AV?$_Iosb@H@std@@)
 // .?AV?$basic_streambuf@DU?$char_traits@D@std@@@std@@
-// .?AV?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@ (base classes: .?AV_Facet_base@std@@, .?AVfacet@locale@std@@, .?AU_Crt_new_delete@std@@)
-// .?AV?$numpunct@D@std@@ (base classes: .?AV_Facet_base@std@@, .?AVfacet@locale@std@@, .?AU_Crt_new_delete@std@@)
+// .?AV?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@ (base classes: .?AVfacet@locale@std@@, .?AV_Facet_base@std@@, .?AU_Crt_new_delete@std@@)
+// .?AV?$numpunct@D@std@@ (base classes: .?AVfacet@locale@std@@, .?AV_Facet_base@std@@, .?AU_Crt_new_delete@std@@)
 // .?AVBitmap@Gdiplus@@ (base classes: .?AVGdiplusBase@Gdiplus@@, .?AVImage@Gdiplus@@)
 // .?AVGdiplusBase@Gdiplus@@
 // .?AVImage@Gdiplus@@
 // .?AV_Facet_base@std@@
 // .?AV_Generic_error_category@std@@
 // .?AV_Iostream_error_category@std@@ (base classes: .?AVerror_category@std@@, .?AV_Generic_error_category@std@@)
-// .?AV_System_error@std@@ (base classes: .?AVruntime_error@std@@, .?AVexception@std@@)
+// .?AV_System_error@std@@ (base classes: .?AVexception@std@@, .?AVruntime_error@std@@)
 // .?AVbad_alloc@std@@ (base classes: .?AVexception@std@@)
-// .?AVbad_array_new_length@std@@ (base classes: .?AVbad_alloc@std@@, .?AVexception@std@@)
+// .?AVbad_array_new_length@std@@ (base classes: .?AVexception@std@@, .?AVbad_alloc@std@@)
 // .?AVbad_cast@std@@ (base classes: .?AVexception@std@@)
 // .?AVerror_category@std@@
 // .?AVexception@std@@
