@@ -61,7 +61,7 @@ def file_table(table, sha265_len: int = 8,
     prints a table of FileInfo objects
     ╭────────┬────────┬────────┬─────┬─────┬──────────╮
     │ sha256 │  size  │  arch  │ GUI │ DLL │ LSTRCPYA │
-    ├────────┼────────┼────────┼─────┼─────┼──────────┼
+    ├────────┼────────┼────────┼─────┼─────┼──────────┤
     │ fa59ac │ 450560 │ 64 bit │ yes │     │ imported │
     """
 

@@ -10,6 +10,13 @@ from src.tools import check_retdec, rot, validate_url, strings
 
 class Predictor():
 
+    def yara(file: FileInfo) -> bool:
+        '''
+        A fast Yara based Predictor
+        '''
+        # TODO: implement
+        return NotImplementedError
+
     def lstrcpyA(file: FileInfo) -> bool:
         '''
         a helper function to check if lstrcpyA is imported
@@ -25,7 +32,7 @@ class Predictor():
             lstrcpyA = None
             for entry in pe.DIRECTORY_ENTRY_IMPORT:
                 dll_name = entry.dll.decode('utf-8')
-                if dll_name == "KERNEL32.dll":
+                if dll_name == "KERNEL32.dll" or dll_name == "kernel32.dll":
                     for func in entry.imports:
                         if func.name.decode('utf-8') == 'lstrcpyA':
                             lstrcpyA = func.address

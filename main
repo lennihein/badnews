@@ -10,13 +10,13 @@ from alive_progress import alive_it, config_handler
 ###############################################################################
 # available predictors: retdec, naive
 PREDICTOR = Predictor.retdec
-PRINT_ALL       = False 
-DETAILED_POS    = True  
-CHECK_NOLSTRCPY = False 
-CHECK_NO_URL    = False 
-GIVE_SUGGESTION = False 
-FIND_UNIQUES    = True  
-LIST_LABELED    = False 
+PRINT_ALL       = False
+DETAILED_POS    = True
+CHECK_NOLSTRCPY = False
+CHECK_NO_URL    = False
+GIVE_SUGGESTION = False
+FIND_UNIQUES    = True
+LIST_LABELED    = False
 ###############################################################################
 
 
@@ -49,11 +49,8 @@ if __name__ == "__main__":
 
     print(f"{BOLD + YELLOW} [*] Analysing binaries...{ENDC}")
 
-    # # fetch urls from strings
-    # rets = list(map(strings, rets))
-
     for i in alive_it(rets):
-        
+
         PREDICTOR(i)
 
         # check urls of predictions
@@ -70,7 +67,7 @@ if __name__ == "__main__":
                     for url in i.encrypted_urls:
                         print(f"> {url}")
                     print()
-        
+
         # check pred but no lstrcpya
         if CHECK_NOLSTRCPY:
             if i.prediction == True and i.lstrcpya == False:
@@ -148,7 +145,7 @@ if __name__ == "__main__":
         print(file_table([rand], sha265_len=64))
         if rand.urls and len(rand.urls) > 0:
             print(f"{BOLD}Unencrypted URLs:{ENDC}")
-            for i in rand.urls:   
+            for i in rand.urls:
                 print(f"> {i}")
             print()
         if rand.encrypted_urls and len(rand.encrypted_urls) > 0:
@@ -175,7 +172,7 @@ if __name__ == "__main__":
                     badnews_strings[j] = 1
                 else:
                     badnews_strings[j] += 1
-        
+
         for i in alive_it(negatives):
             new_strings = get_strings(i)
             for j in new_strings:
