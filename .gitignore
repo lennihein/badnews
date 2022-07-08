@@ -11,3 +11,9 @@ lifting.rep
 tests/__pycache__/
 
 src/__pycache__/
+
+broken*
+
+samples_fresh/
+
+oxidised/

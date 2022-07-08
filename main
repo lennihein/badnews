@@ -8,8 +8,8 @@ from alive_progress import alive_it, config_handler
 
 
 ###############################################################################
-# available predictors: retdec, naive
-PREDICTOR = Predictor.retdec
+# available predictors: retdec_c, retdec_llvm, naive
+PREDICTOR = Predictor.retdec_llvm
 PRINT_ALL       = False
 DETAILED_POS    = True
 CHECK_NOLSTRCPY = False

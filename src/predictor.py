@@ -32,7 +32,7 @@ class Predictor():
             lstrcpyA = None
             for entry in pe.DIRECTORY_ENTRY_IMPORT:
                 dll_name = entry.dll.decode('utf-8')
-                if dll_name == "KERNEL32.dll" or dll_name == "kernel32.dll":
+                if dll_name == "KERNEL32.dll": #or dll_name == "kernel32.dll":
                     for func in entry.imports:
                         if func.name.decode('utf-8') == 'lstrcpyA':
                             lstrcpyA = func.address
@@ -68,12 +68,79 @@ class Predictor():
         file.prediction = True if len(file.encrypted_urls) >= 2 else False
         return file.prediction
 
-    def retdec(file: FileInfo) -> bool:
+    def retdec_llvm(file: FileInfo) -> bool:
         '''
         An advanced predictor that uses retdec to decompile the binaries. 
         (Only checks those which import lstrcpyA)
         Checks for multiple calls of lstrcpyA on intermediate user strings, 
         at the start of the respective functions.
+        '''     
+        if file.lstrcpya == None:
+            Predictor.lstrcpyA(file)
+
+        if not file.lstrcpya:
+            file.prediction = False
+            return False
+        
+        if not check_retdec(file):
+            return False
+
+        ''' first, we need to get the functions in a list '''
+
+        functions = []
+
+        with open(file.path + ".ll", "r") as f:
+            lines = f.readlines()
+            counter = 0
+            while True:
+                if counter >= len(lines):
+                    break
+                if "define" in lines[counter] and "@function" in lines[counter]:
+                    start = counter
+                    while True:
+                        counter += 1
+                        if "}" in lines[counter]:
+                            end = counter
+                            break
+                    functions.append(lines[start:end+1])   
+                else:
+                    counter += 1
+
+        '''now that we have all functions, let's check for lstrcpya calls'''
+
+        for f in functions:
+            f_lines = []
+            for l in f:
+                if "@lstrcpyA" in l and "call" in l and "@global_var" in l:
+                    f_lines.append(l)
+            if len(f_lines) >= 2:
+                
+                vars = []
+                for l in f_lines:
+
+                    vars.append([x for x in l.replace(' ', ',').split(',') if "@global_var" in x][0])
+                
+                try: 
+                    c2s = [rot(x.split('"')[1])[0:-3].strip() for x in lines if x.split(' ')[0] in vars]
+                except IndexError:
+                    file.prediction = False
+                    return False
+                    
+                file.encrypted_urls = sorted(c2s)
+
+                file.prediction = True
+                return True
+
+        file.prediction = False
+        return False
+            
+    def retdec_c(file: FileInfo) -> bool:
+        '''
+        An advanced predictor that uses retdec to decompile the binaries. 
+        (Only checks those which import lstrcpyA)
+        Checks for multiple calls of lstrcpyA on intermediate user strings, 
+        at the start of the respective functions.
+        OUTDATED VARIANT using C decompilate, instead of LLVM
         '''        
 
         if file.lstrcpya == None:

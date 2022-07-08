@@ -136,7 +136,7 @@ def check_retdec(file: FileInfo) -> bool:
     checks if a file is decompiled by retdec already, if not, tries to decompile it
     '''
     # print(f"{file.sha256[:6]}: ", end="")
-    if not os.path.isfile(file.path + ".c"):
+    if not os.path.isfile(file.path + ".ll"):
         # print("Decompiling...")
         os.system("timeout 15s retdec-decompiler.py " + file.path + " 1> /dev/null 2>& 1")
     # else:
