@@ -14,7 +14,7 @@ pip2 install  bap[rpc]
 ```
 
 - Since opam doesn't run on some VMs/WSL/Docker without disabling sandboxing, we need to pass that first:
-- **Important**: for some reason reinit-ing with sandboxing disabled DOESN'T work, in that case you need to remove the whole `.opam` folder and init freshly. Whyyyy`
+- **Important**: for some reason reinit-ing with sandboxing disabled DOESN'T work, in that case you need to remove the whole `.opam` folder and init freshly. Whyyyy
 ```
 opam init --disable-sandboxing
 ```
