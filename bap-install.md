@@ -4,7 +4,7 @@
 
 - first, let's install some requirements (Debian)
 ```
-apt install curl llvm-9-dev llvm clang libgmp-dev pkg-config opam -y
+apt install curl llvm-9-dev llvm clang libgmp-dev pkg-config opam python2 -y
 ```
 
 - BAP is not migrated to ~~Python 3.10~~ *Python 3* so install ~~Python 3.9~~ *Python 2*.
