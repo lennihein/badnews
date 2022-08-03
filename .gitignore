@@ -17,3 +17,7 @@ broken*
 samples_fresh/
 
 oxidised/
+
+badnews.rep/
+
+venv/
