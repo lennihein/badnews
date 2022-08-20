@@ -17,6 +17,7 @@ CHECK_NO_URL    = False
 GIVE_SUGGESTION = False
 FIND_UNIQUES    = True
 LIST_LABELED    = False
+LABEL_SAMPLES   = False
 ###############################################################################
 
 
@@ -52,6 +53,12 @@ if __name__ == "__main__":
     for i in alive_it(rets):
 
         PREDICTOR(i)
+
+        # use results to flag samples
+        if LABEL_SAMPLES:
+            if not ("_P" in i.path or "_N" in i.path):
+                os.rename(i.path, i.path + ("_P" if i.prediction else "_N"))
+                i.path = i.path + ("_P" if i.prediction else "_N")
 
         # check urls of predictions
         if DETAILED_POS:
