@@ -83,6 +83,7 @@ class Predictor():
             return False
         
         if not check_retdec(file):
+            file.prediction = False
             return False
 
         ''' first, we need to get the functions in a list '''
