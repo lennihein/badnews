@@ -6,7 +6,8 @@ from capstone import *
 from src.pretty_print import BOLD, RED, ENDC, FAIL
 import subprocess as sp
 import os
-from src.tools import check_retdec, rot, validate_url, strings
+
+from src.tools import check_retdec, rot, validate_url, strings, get_strings
 
 class Predictor():
 
@@ -14,8 +15,11 @@ class Predictor():
         '''
         A fast Yara based Predictor
         '''
-        # TODO: implement
-        return NotImplementedError
+        import yara
+        rules = yara.compile('badnews.yar')
+        match = rules.match(file.path)
+        file.prediction = True if match else False  
+        return file.prediction
 
     def lstrcpyA(file: FileInfo) -> bool:
         '''
@@ -43,6 +47,51 @@ class Predictor():
         return False
 
     def naive(file: FileInfo) -> bool:
+        '''
+        a naive predictor that checks for encrypted strings in the binary, IF lstrcpyA is imported
+        '''
+        if file.lstrcpya == None:
+            file.lstrcpya = Predictor.lstrcpyA(file)
+
+        if file.lstrcpya == False:
+            file.prediction = False
+            return False
+
+        if not file.urls:
+            file = strings(file)
+
+        # if at least 2 encrypted urls exist, it's probably a badnews sample
+        file.prediction = True if len(file.encrypted_urls) >= 2 else False
+        return file.prediction
+
+    def naive_melina(file: FileInfo) -> bool:
+        '''
+        a naive predictor that checks for encrypted strings in the binary, IF lstrcpyA is imported
+        '''
+        if file.lstrcpya == None:
+            file.lstrcpya = Predictor.lstrcpyA(file)
+
+        if file.lstrcpya == False:
+            file.prediction = False
+            return False
+
+        if not file.urls:
+            file = strings(file)
+       
+        strs = get_strings(file)
+        counter = 0
+        for s in ["32.df", "indo", "&r=1", "U0S0!"]:
+            if s in strs:
+                counter += 1
+        if counter < 2:
+            file.prediction = False
+            return False
+
+        # if at least 2 encrypted urls exist, it's probably a badnews sample
+        file.prediction = True if len(file.encrypted_urls) >= 2 else False
+        return file.prediction   
+
+    def naive_lenni(file: FileInfo) -> bool:
         '''
         a naive predictor that checks for encrypted strings in the binary, IF lstrcpyA is imported
         '''

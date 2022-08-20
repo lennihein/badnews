@@ -8,16 +8,17 @@ from alive_progress import alive_it, config_handler
 
 
 ###############################################################################
-# available predictors: retdec_c, retdec_llvm, naive
-PREDICTOR = Predictor.retdec_llvm
+# available predictors: retdec_c, retdec_llvm, naive, naive_melina, naive_lenni, yara
+PREDICTOR = Predictor.naive
 PRINT_ALL       = False
 DETAILED_POS    = True
 CHECK_NOLSTRCPY = False
 CHECK_NO_URL    = False
 GIVE_SUGGESTION = False
-FIND_UNIQUES    = True
+FIND_UNIQUES    = False
 LIST_LABELED    = False
 LABEL_SAMPLES   = False
+MACHINE_READBLE = False
 ###############################################################################
 
 
@@ -162,7 +163,7 @@ if __name__ == "__main__":
             print()
 
     # print out results as jsonl
-    if is_dir:
+    if is_dir and MACHINE_READBLE:
         f = open("output.jsonl", "w")
         for i in rets:
             f.write(i.to_json())
