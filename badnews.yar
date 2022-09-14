@@ -4,5 +4,5 @@ rule badnews
         $ = "404 Not Found"
         $ = "&r=1"
     condition:
-        all of them
+        any of them
 }

@@ -7,19 +7,21 @@ from src.pretty_print import BOLD, RED, ENDC, FAIL
 import subprocess as sp
 import os
 
-from src.tools import check_retdec, rot, validate_url, strings, get_strings
+from src.tools import check_retdec, rot, validate_url, strings, get_strings, run_yara
 
 class Predictor():
 
-    def yara(file: FileInfo) -> bool:
+    def yara_jesko(file: FileInfo) -> bool:
         '''
         A fast Yara based Predictor
         '''
-        import yara
-        rules = yara.compile('badnews.yar')
-        match = rules.match(file.path)
-        file.prediction = True if match else False  
-        return file.prediction
+        run_yara(file, 'badnews_jesko.yar')
+
+    def yara_full(file: FileInfo) -> bool:
+        '''
+        A fast Yara based Predictor
+        '''
+        run_yara(file, 'badnews.yar')
 
     def lstrcpyA(file: FileInfo) -> bool:
         '''
@@ -78,18 +80,13 @@ class Predictor():
         if not file.urls:
             file = strings(file)
        
-        strs = get_strings(file)
-        counter = 0
-        for s in ["32.df", "indo", "&r=1", "U0S0!"]:
-            if s in strs:
-                counter += 1
-        if counter < 2:
-            file.prediction = False
+        run_yara(file, 'badnews_melina.yar')
+        if file.prediction is False:
             return False
 
         # if at least 2 encrypted urls exist, it's probably a badnews sample
         file.prediction = True if len(file.encrypted_urls) >= 2 else False
-        return file.prediction   
+        return file.prediction
 
     def naive_lenni(file: FileInfo) -> bool:
         '''

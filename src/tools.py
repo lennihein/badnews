@@ -113,6 +113,12 @@ def strings(info: FileInfo) -> FileInfo:
 
     return info
 
+def run_yara(file: FileInfo, rule: str):
+        import yara
+        rules = yara.compile(rule)
+        match = rules.match(file.path)
+        file.prediction = True if match else False  
+        return file.prediction
 
 def batch(fn, path):
     """
