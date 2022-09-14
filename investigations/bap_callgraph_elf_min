@@ -1,0 +1,14 @@
+
+digraph  {
+  "@__libc_csu_fini"
+  "@__libc_csu_init"
+  "@_dl_relocate_static_pie"
+  "@_init"
+  "@_start"
+  "@main"
+  "@printf"
+  "@sub_401026"
+  "@__libc_csu_init" -> "@_init"
+  "@_start" -> "@_dl_relocate_static_pie"
+  "@main" -> "@printf"
+}

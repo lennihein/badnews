@@ -1,0 +1,16 @@
+14001ce7c: GetConsoleOutputCP
+14001ce92: GetConsoleMode
+14001cea4: GetFileSizeEx
+14001ceb4: SetFilePointerEx
+14001cec8: HeapSize
+14001ced4: HeapReAlloc
+14001cee2: CloseHandle
+14001cef0: CreateFileW
+14001cefe: WriteConsoleW
+14001d000: LOCAL_STRING
+14001d3ba:                           
+14001d49a: abcdefghijklmnopqrstuvwxyz
+14001d4ba: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+14001d5d2:                           
+14001d6c1: abcdefghijklmnopqrstuvwxyz
+14001d6e1: ABCDEFGHIJKLMNOPQRSTUVWXYZ
