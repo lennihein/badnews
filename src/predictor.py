@@ -1,5 +1,5 @@
 from curses import ERR
-from re import U
+import re
 from src.file import FileInfo
 import pefile
 from capstone import *
@@ -54,9 +54,9 @@ class Predictor():
         '''
         if file.lstrcpya == None:
             file.lstrcpya = Predictor.lstrcpyA(file)
-
-        if file.lstrcpya == False:
-            file.prediction = False
+            
+        file.prediction = file.lstrcpya
+        if file.prediction == False:
             return False
 
         if not file.urls:
@@ -101,6 +101,11 @@ class Predictor():
 
         if not file.urls:
             file = strings(file)
+
+        # if at least 2 encrypted urls exist, it's probably a badnews sample
+        file.prediction = True if len(file.encrypted_urls) >= 2 else False
+
+
         # so far almost none of the delphi GUI applications have been badnews samples
         if file.GUI:
             # but badnews loves themselves some xml files
@@ -110,8 +115,7 @@ class Predictor():
                     return True
             file.prediction = False
             return False
-        # if at least 2 encrypted urls exist, it's probably a badnews sample
-        file.prediction = True if len(file.encrypted_urls) >= 2 else False
+
         return file.prediction
 
     def retdec_llvm(file: FileInfo) -> bool:
@@ -155,31 +159,37 @@ class Predictor():
 
         '''now that we have all functions, let's check for lstrcpya calls'''
 
-        for f in functions:
-            f_lines = []
-            for l in f:
+        for func in functions:
+
+            # we only want to check functions that have a call to lstrcpyA
+            lstrcpya_lines = []
+            for l in func:
                 if "@lstrcpyA" in l and "call" in l and "@global_var" in l:
-                    f_lines.append(l)
-            if len(f_lines) >= 2:
-                
-                vars = []
-                for l in f_lines:
+                    lstrcpya_lines.append(l)
+            if len(lstrcpya_lines) < 2:
+                continue
+            
+            # collect the identifiers of the strings
+            strings = []
+            for l in lstrcpya_lines:
+                strings.append([x for x in re.split(' |,', l) if "@global_var" in x][0])
+            
+            # decrypt the strings
+            c2s = [rot(x.split('"')[1])[0:-3].strip() for x in lines if x.split(' ')[0] in strings]
 
-                    vars.append([x for x in l.replace(' ', ',').split(',') if "@global_var" in x][0])
-                
-                try: 
-                    c2s = [rot(x.split('"')[1])[0:-3].strip() for x in lines if x.split(' ')[0] in vars]
-                except IndexError:
-                    file.prediction = False
-                    return False
-                    
-                file.encrypted_urls = sorted(c2s)
+            # check if the decrypted strings are valid urls
+            file.encrypted_urls = list(filter(validate_url, sorted(c2s)))
 
-                file.prediction = True
-                return True
-
+            # if at least 2 encrypted urls exist, it's probably a badnews sample
+            if len (file.encrypted_urls) < 2:
+                continue
+            file.prediction = True
+            return True
+        
+        # if no function with at least 2 lstrcpyA calls is found -> not badnews
         file.prediction = False
         return False
+        
             
     def retdec_c(file: FileInfo) -> bool:
         '''
