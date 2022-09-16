@@ -8,17 +8,19 @@ from alive_progress import alive_it, config_handler
 
 
 ###############################################################################
-# predictors: retdec_c, retdec_llvm, naive, naive_melina, naive_lenni, yara_jesko, yara_full
-PREDICTOR = Predictor.naive_melina
-PRINT_ALL       = False
-DETAILED_POS    = True
-CHECK_NOLSTRCPY = False
-CHECK_NO_URL    = False
-GIVE_SUGGESTION = False
-FIND_UNIQUES    = False
-LIST_LABELED    = False
-LABEL_SAMPLES   = False
-MACHINE_READABLE = False
+# see readme.md for explanation of the parameters
+PREDICTOR        = Predictor.retdec_llvm
+# available predictors: retdec_c, retdec_llvm, naive, naive_melina,
+#                       naive_lenni, yara_jesko, yara_full
+PRINT_ALL        = False
+DETAILED_POS     = True
+CHECK_NOLSTRCPY  = False
+CHECK_NO_URL     = False
+GIVE_SUGGESTION  = False
+FIND_UNIQUES     = True
+LIST_LABELED     = False
+LABEL_SAMPLES    = False
+MACHINE_READABLE = True
 ###############################################################################
 
 
@@ -74,38 +76,6 @@ if __name__ == "__main__":
                     print(f"{BOLD}Encrypted URLs:{ENDC}")
                     for url in i.encrypted_urls:
                         print(f"> {url}")
-                    print()
-
-        # check pred but no lstrcpya
-        if CHECK_NOLSTRCPY:
-            if i.prediction == True and i.lstrcpya == False:
-                print(f"{BOLD + RED} [*] lstrcpya not imported but possibly badnews:{ENDC}")
-                print(file_table([i], sha265_len=6))
-                if i.urls and len(i.urls) > 0:
-                    print(f"{BOLD}The following URLs are unencrypted:{ENDC}")
-                    for j in i.urls:
-                        print(f"> {j}")
-                    print()
-                if i.encrypted_urls and len(i.encrypted_urls) > 0:
-                    print(f"{BOLD}The following URLs are encrypted:{ENDC}")
-                    for j in i.encrypted_urls:
-                        print(f"> {j}")
-                    print()
-
-        # check lstrcpya importing, but not url encrypting
-        if CHECK_NO_URL:
-            if i.prediction == False and i.lstrcpya == True:
-                print(f"{BOLD + RED} [*] lstrcpya imported but NOT predicted as badnews:{ENDC}")
-                print(file_table([i], sha265_len=6))
-                if i.urls and len(i.urls) > 0:
-                    print(f"{BOLD}The following URLs are unencrypted:{ENDC}")
-                    for j in i.urls:
-                        print(f"> {j}")
-                    print()
-                if i.encrypted_urls and len(i.encrypted_urls) > 0:
-                    print(f"{BOLD}The following URLs are encrypted:{ENDC}")
-                    for j in i.encrypted_urls:
-                        print(f"> {j}")
                     print()
 
     falses = [i for i in rets if i.label!=None and i.prediction != i.label]
