@@ -15,13 +15,13 @@ class Predictor():
         '''
         A fast Yara based Predictor
         '''
-        run_yara(file, 'badnews_jesko.yar')
+        run_yara(file, 'rules/badnews_jesko.yar')
 
     def yara_full(file: FileInfo) -> bool:
         '''
         A fast Yara based Predictor
         '''
-        run_yara(file, 'badnews.yar')
+        run_yara(file, 'rules/badnews.yar')
 
     def lstrcpyA(file: FileInfo) -> bool:
         '''
@@ -80,7 +80,7 @@ class Predictor():
         if not file.urls:
             file = strings(file)
        
-        run_yara(file, 'badnews_melina.yar')
+        run_yara(file, 'rules/badnews_melina.yar')
         if file.prediction is False:
             return False
 

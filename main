@@ -9,7 +9,7 @@ from alive_progress import alive_it, config_handler
 
 ###############################################################################
 # predictors: retdec_c, retdec_llvm, naive, naive_melina, naive_lenni, yara_jesko, yara_full
-PREDICTOR = Predictor.naive
+PREDICTOR = Predictor.naive_melina
 PRINT_ALL       = False
 DETAILED_POS    = True
 CHECK_NOLSTRCPY = False
